@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    /* Hide scrollbar - Firefox */
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar - Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+/* HERO */
+.hero-section {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+
+/* MISSION */
+
+.mission-section{
+    background:#dfe7e4;
+    position: relative;
+}
+
+.mission-logo{
+    height:85px;
+}
+
+.mission-title{
+    font-size:28px;
+    font-weight:600;
+    margin:0;
+    color:#0c4a47;
+}
+
+.stat-pill{
+    background:white;
+    padding:14px 28px;
+    border-radius:40px;
+    width: 160px;
+}
+
+.stat-pill h4{
+    margin:0;
+    font-size:20px;
+    font-weight: 700;
+    color:#0c4a47;
+}
+
+.stat-pill p{
+    margin:0;
+    font-size:13px;
+}
+
+.mission-content{
+    max-width:720px;
+    color:#0c4a47;
+    line-height:1.2;
+    font-size: 19px;
+}
+
+/* news section */
+.news-section {
+    min-height: 100vh;
+    background-color: #fff;
+    /* padding: 80px 0; */
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 420px) {
+    .news-section {
+        padding: 0;
+    }
+
+    .news-title-text {
+        font-size: 15px;
+    }
+
+    .news-desc-text {
+        font-size: 12px;
+    }
+}
+
+.news-img {
+    width: 100%;
+    /* height: auto; */
+    border-radius: 12px;
+    object-fit: contain;
+    /* object-fit: cover; */
+    /* display: block; */
+}
+
+/* ON BOARD SECTION  */
+.onboard-section {
+    background-color: #EBF6EE;
+    min-height: 90vh; /* instead of height */
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px; /* responsive padding */
+    background-size: cover;
+    background-position: center;
+}
+
+.onboard-section-container {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('../assets/images/story7-bg.avif');
+        
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    max-width: 1200px; /* keeps it centered & clean */
+    min-height: 300px;
+    border-radius: 26px;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.onboard-btn {
+    background-color: #FFFBCA;
+    color: #00373B;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.onboard-btn:hover {
+    background-color: #003A3F;
+    color: #FFFBCA;
+}
+
+@media (max-width: 576px) {
+    .onboard-section {
+        padding: 40px;
+        min-height: auto;
+    }
+
+    .onboard-section-container {
+        min-height: 200px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .onboard-text {
+        font-size: 16px;
+    }
+
+    .onboard-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+}

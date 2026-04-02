@@ -1,0 +1,149 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    /* Hide scrollbar - Firefox */
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar - Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* -----------  */
+
+.brand-intro-block {
+    background-color: #EBF6EE !important;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 576px) {
+    .brand-intro-block {
+        background-color: #EBF6EE !important;
+        min-height: 70vh;
+    }
+}
+
+.brand-partners-block {
+    background-color: #EBF6EE;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+}
+
+.product-chips {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    border: none;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    background: #d9d9d9;
+    color: #222;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.chip.active {
+    background: #16e6c7;
+    font-weight: 600;
+}
+
+.product-chips .chip.active {
+    background: #16e6c7;
+    color: #000;
+    font-weight: 600;
+}
+
+.product-chips .chip:hover {
+    filter: brightness(0.95);
+}
+
+@media (max-width: 576px) {
+    .product-chips .chip {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+.active-filter {
+    background: #20e6d2;
+    border-color: #20e6d2;
+    color: #0b2b2b;
+}
+
+@media (max-width: 576px) {
+    .filter-scroll {
+        justify-content: flex-start;
+    }
+
+    .filter-scroll .btn {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+
+/* ==========================
+   DISTRIBUTION PARTNERS
+========================== */
+.partners-block {
+    background-color: #EBF6EE;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+}
+
+.partners-block {
+    overflow-x: hidden;
+}
+
+.partner-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.partner-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile polish */
+@media (max-width: 576px) {
+    .partner-logo {
+        max-height: 90px;
+    }
+
+    .partners-block h3 {
+        font-size: 20px;
+    }
+}

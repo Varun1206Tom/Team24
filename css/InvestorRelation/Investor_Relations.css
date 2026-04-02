@@ -1,0 +1,817 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    /* Hide scrollbar - Firefox */
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar - Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+/* ----- Annual Report Css ------- */
+/* Menu sec */
+.full-screen-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.full-screen-image img {
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 30px;
+}
+
+.menu-section {
+    width: 100%;
+    height: auto;
+    background-color: #EBF6EE;
+    padding-top: 8%;
+}
+
+@media screen and (max-width: 576px) {
+    .menu-section {
+        padding-top: 28% !important;
+        padding-bottom: 110% !important;
+    }
+}
+
+/* Styles for the nav container */
+.nav-container2 {
+    background-color: white;
+    border-radius: 14px;
+    display: inline-block;
+    height: -webkit-fill-available;
+    width: 245px;
+}
+
+.hover-rectangle2 {
+    font-family: "Manrope", sans-serif;
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    padding: 0px 40px !important;
+    transition: color 0.3s ease;
+    z-index: 1;
+    text-align: center;
+    color: #005659 !important;
+    font-size: 20px !important;
+    min-width: 100px;
+    text-decoration: none;
+}
+
+.hover-rectangle2:hover {
+    color: white !important;
+}
+
+.hover-rectangle2::after {
+    content: '';
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #005659;
+    border-radius: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+    z-index: -1;
+    height: 60px;
+    width: calc(100% - -10px);
+}
+
+.hover-rectangle2:hover::after {
+    opacity: 1;
+}
+
+.nav-link2.active::after {
+    opacity: 1;
+    background-color: #005659;
+}
+
+.nav-link2.active {
+    color: white !important;
+}
+
+.nav-link2.active:hover {
+    color: white !important;
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: #2BAE9D !important;
+    --bs-border-radius: 30px;
+}
+
+.nav-pills .nav-link2.active,
+.nav-pills .show>.nav-link2 {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: none !important;
+}
+
+.nav-item2 {
+    margin: 0;
+    background-color: white;
+}
+
+.nav-fill .nav-item2,
+.nav-fill>.nav-link2 {
+    flex: 1 1 auto;
+    text-align: center;
+    border: solid;
+    border-width: 6px;
+    border-color: #2BAE9D;
+    border-radius: 14px;
+    height: 70px;
+    align-content: center;
+    width: 258px;
+    align-content: center;
+}
+
+.border-container {
+    background-color: #2BAE9D;
+    /* border: 2px solid black; */
+    /* padding: 16px; */
+    width: 100%;
+    /* border-radius: 8px; */
+}
+
+
+/* navbar-3 */
+
+.unique-container {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    overflow-x: auto;
+    /* Allows horizontal scrolling if content overflows */
+}
+
+.unique-inner-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    /* Keeps items in a single row */
+}
+
+.unique-nav {
+    display: flex;
+    gap: 10px;
+    /* Adds space between items */
+    padding: 0;
+    margin: 0;
+}
+
+.unique-nav-item {
+    display: inline-flex;
+    /* Makes items appear side by side */
+}
+
+.unique-nav-container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-flex;
+    height: 44px;
+}
+
+.unique-hover-rectangle {
+    font-family: "Manrope", sans-serif;
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    padding: 0px 12px !important;
+    transition: color 0.3s ease;
+    z-index: 1;
+    text-align: center;
+    color: #005659 !important;
+    font-size: 20px !important;
+    min-width: 100px;
+    text-decoration: none;
+}
+
+.unique-hover-rectangle:hover {
+    color: white !important;
+}
+
+.unique-hover-rectangle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2BAE9D;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+    z-index: -1;
+    height: 44px;
+    width: calc(100% - -5px);
+}
+
+.unique-hover-rectangle:hover::after {
+    opacity: 1;
+}
+
+.unique-nav-link.unique-active::after {
+    opacity: 1;
+    background-color: #2BAE9D;
+}
+
+.unique-nav-link.unique-active {
+    color: white !important;
+}
+
+.unique-nav-link.unique-active:hover {
+    color: white !important;
+}
+
+/* Base styles for unique-nav-pills */
+.unique-nav-pills {
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: #2BAE9D !important;
+    --bs-border-radius: 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Space between nav items */
+}
+
+/* Active link styling */
+.unique-nav-pills .unique-nav-link.unique-active,
+.unique-nav-pills .show>.unique-nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: var(--bs-nav-pills-link-active-bg) !important;
+    border-radius: var(--bs-border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General nav-link styling */
+.unique-nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 25px !important;
+    text-align: center;
+    text-decoration: none;
+    color: #2BAE9D;
+    font-family: "Manrope", sans-serif;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: var(--bs-border-radius);
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for nav-link
+.unique-nav-link:hover {
+    color: #fff;
+    background-color: #2BAE9D;
+    border-color: #2BAE9D;
+} */
+
+/* Unique nav item styling */
+.unique-nav-item {
+    margin: 0;
+}
+
+/* Styling for nav-fill */
+.unique-nav-fill .unique-nav-item {
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+.unique-nav-fill .unique-nav-item .unique-nav-link {
+    /* border: solid 6px #2BAE9D; */
+    /* height: 70px;
+    width: 258px; */
+    border-radius: 14px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* product */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    padding: 2rem 5%;
+}
+
+.product-column {
+    flex: 1 1 20%;
+    max-width: 386px;
+    height: 262px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for each card nav-3 */
+.product-card {
+    width: 100%;
+    height: 286px;
+    border: 1px #005659;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product information styling */
+.product-info {
+    text-align: center;
+    padding: 1rem;
+}
+
+.product-title {
+    font-family: "Manrope", sans-serif;
+    font-size: 26px;
+    font-weight: bolder;
+    line-height: 114.9%;
+    margin-bottom: 0.5rem;
+    color: #005659;
+    padding-top: 15px;
+}
+
+.product-title-divider {
+    font-family: "Manrope", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 114.9%;
+    margin-bottom: 0.5rem;
+    color: #005659;
+    /* padding-top: 15px; */
+}
+
+.product-description {
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    line-height: 114.9%;
+    /* font-weight: 500; */
+    color: #005659;
+    margin-bottom: 0.5rem;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.product-description2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    line-height: 114.9%;
+    /* font-weight: 500; */
+    color: #005659;
+    margin-bottom: 0.5rem;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+
+
+.product-brand {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    line-height: 114.9%;
+    font-weight: 200;
+    color: #005659;
+    color: #005659;
+    padding-left: 18px;
+    padding-right: 18px;
+    letter-spacing: 0;
+}
+
+
+/* Divider line styling */
+.product-divider {
+    border: none;
+    border-top: 1px solid #005659;
+    width: 320px;
+    margin: 1rem auto;
+    /* Center align and add vertical spacing */
+    opacity: 1;
+
+}
+
+@media screen and (min-width: 320px) {
+    .product-title {
+        font-family: "Manrope", sans-serif;
+        font-size: 21px;
+        /* line-height: 114.9%;
+        margin-bottom: 0.5rem;
+        color: #005659;
+        padding-top: 15px; */
+    }
+
+    .product-description {
+        font-size: 16px;
+    }
+
+    .product-description2 {
+        font-size: 16px;
+    }
+}
+
+
+/* Dynamic card widths */
+.product-column:nth-child(1) .product-card {
+    width: 386px;
+    /* Custom width for the first card */
+}
+
+.product-column:nth-child(2) .product-card {
+    width: 497px !important;
+    /* Custom width for the second card */
+    flex: none;
+}
+
+.product-column:nth-child(3) .product-card {
+    width: 366px;
+    /* Custom width for the third card */
+}
+
+.footer-rectangle {
+    width: 100%;
+    height: 300px;
+    background-color: #005659;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Logo */
+.logo {
+    height: 79.91px;
+    width: 351px;
+    object-fit: contain;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 21.98px;
+    line-height: 35.2px;
+    color: white;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.center-text {
+    text-align: center;
+    /* This centers the text horizontally */
+    width: 100%;
+    /* Optional: ensures the div takes the full width of its container */
+    font-size: 30px;
+    font-family: "Manrope", sans-serif;
+    color: #005659;
+
+}
+
+.centered-container {
+    gap: 20px;
+    height: 102px;
+    width: 1283px;
+    border-radius: 15px;
+    margin: 0 auto;
+    /* Horizontally centers the container */
+    position: relative;
+    /* Optional for more control */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allow wrapping when space is constrained */
+    padding-bottom: 135px
+}
+
+@media screen and (max-width: 420px) {
+    .centered-container {
+        width: 100%;
+    }
+}
+
+.White-container {
+    width: 363.07px;
+    height: 63px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* Spaces out the content */
+    align-items: center;
+    padding: 0 10px;
+}
+
+.name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    color: #005659;
+}
+
+.download-btn {
+    background-color: #1FFFD9;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #005659;
+}
+
+.download-btn:hover {
+    background-color: #00E6C7;
+    /* Darker shade on hover */
+}
+
+.download-icon {
+    margin-right: 5px;
+    /* Adds some space between the icon and the text */
+}
+
+.download-icon {
+    width: 20px;
+    /* Adjust image width */
+    height: 20px;
+    /* Adjust image height */
+    margin-left: 10px;
+    /* Adds some space between the icon and the text */
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+
+    /* Navbar and Navigation */
+    .custom-hover {
+        padding: 3px 8px;
+        height: 50px;
+        padding: 10px 15px !important;
+    }
+
+    .custom-hover::after {
+        border-radius: 25px;
+    }
+
+    /* menu sec */
+    .full-screen-image img {
+        width: 100%;
+        object-fit: contain;
+
+    }
+
+    .nav-container2 {
+        width: 100%;
+        /* Full width for small screens */
+        height: auto;
+        /* Adjust height to fit content */
+        padding: 10px;
+        /* Padding for spacing */
+        border-radius: 10px;
+    }
+
+    .hover-rectangle2 {
+        font-size: 16px !important;
+        /* Smaller font size */
+        padding: 0px !important;
+    }
+
+    .nav-fill .nav-item2,
+    .nav-fill>.nav-link2 {
+        width: 100%;
+        /* Full width for each item */
+        height: auto;
+        /* Auto height for collapsed view */
+        border-width: 4px;
+        /* Thinner border for small screens */
+        margin-bottom: 10px;
+        /* Spacing between items */
+    }
+
+    .nav-container2 {
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically on mobile */
+        align-items: center;
+    }
+
+    .hover-rectangle2::after {
+        height: 65px;
+        width: calc(100% - 20px);
+        top: 50%;
+        left: 50%;
+    }
+
+    /* Navbar container adjustments */
+    .unique-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .unique-inner-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .unique-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .unique-nav-item {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .unique-nav-link {
+        font-size: 16px;
+        padding: 0.8rem 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .unique-nav-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* product */
+    .product-row {
+        flex-direction: column;
+        /* Stack the product columns vertically */
+        gap: 2rem;
+        /* Adjust gap for smaller screens */
+        padding: 1rem;
+        /* Reduce padding */
+    }
+
+    .product-column {
+        flex: 1 1 100%;
+        /* Make each column take full width */
+        max-width: 100%;
+        /* Remove max-width for responsiveness */
+        height: auto;
+        /* Let height adapt to content */
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 90%;
+        /* Adjust card width to fit on smaller screens */
+        height: auto;
+        /* Let height adapt to content */
+    }
+
+    /* Custom widths for cards in mobile */
+    .product-column:nth-child(1) .product-card {
+        width: 90%;
+        /* Adjust first card width */
+    }
+
+    .product-column:nth-child(2) .product-card {
+        width: 90% !important;
+        /* Adjust second card width */
+    }
+
+    .product-column:nth-child(3) .product-card {
+        width: 90%;
+        /* Adjust third card width */
+    }
+
+    /* footer */
+
+    .footer-rectangle {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+/* Globals applied via script */
+@media (max-width: 576px) {
+
+    /* Main Nav */
+    .nav-fill .nav-item2 {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0 !important;
+        display: flex;
+        overflow: hidden;
+        /* Ensure border radius masks children */
+    }
+
+    .nav-container2 {
+        width: 100%;
+        height: 100%;
+        padding: 0 !important;
+        /* Remove original padding */
+        display: flex;
+        border-radius: 10px !important;
+        background-color: transparent !important;
+    }
+
+    .hover-rectangle2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px !important;
+        font-size: 16px !important;
+    }
+
+    .hover-rectangle2::after {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 10px !important;
+    }
+
+    /* Unique Nav (Board of Directors etc) */
+    .unique-nav-container {
+        width: 100%;
+        height: auto;
+        padding: 0 !important;
+        margin-bottom: 10px !important;
+        display: flex;
+        border-radius: 30px !important;
+        overflow: hidden;
+    }
+
+    .unique-hover-rectangle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+    }
+
+    .unique-hover-rectangle::after {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 30px !important;
+    }
+}
