@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="col-1"></div>
                         <div class="col-3 text-end">
                             <button 
-                                class="btn" 
+                                class="btn  rounded-circle" 
                                 onclick="event.stopPropagation(); window.location.href='job_details.html?id=${job.id}'"
-                                style="background-color: black; color: white; border-radius: 60%;"
+                                style="background-color: black; color: white;"
                             ><i class="bi bi-arrow-right"></i>
                             </button>
                         </div>

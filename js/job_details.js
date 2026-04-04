@@ -217,3 +217,18 @@ emailBtns.forEach(btn => {
         window.location.href = mailtoUrl;
     });
 });
+
+const applyBtn = document.querySelector('.apply-btn');
+const overlay = document.getElementById('blur-overlay');
+
+document.querySelectorAll('.apply-btn').forEach(btn => {
+    
+    btn.addEventListener('show.bs.dropdown', () => {
+        overlay.classList.add('active');
+    });
+
+    btn.addEventListener('hide.bs.dropdown', () => {
+        overlay.classList.remove('active');
+    });
+
+});

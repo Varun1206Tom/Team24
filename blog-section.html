@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beverage Trends in India | Team24 News Room</title>
+    <meta name="description"
+        content="The Indian beverage market is experiencing a dynamic shift, driven by changing consumer preferences and increasing health awareness.">
+    <meta name="author" content="Team24">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,600;9..144,0,700;9..144,1,400;9..144,1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        :root {
+            --cream: #f5f0e8;
+            --warm-white: #faf8f4;
+            --forest: #1e3a2a;
+            --moss: #3d6b4f;
+            --sage: #7aaa82;
+            --sage-light: #b5d4bc;
+            --sage-pale: #e8f0ea;
+            --ink: #1a2520;
+            --muted: #6b8070;
+            --border: #dce8de;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 2px 12px rgba(30, 58, 42, 0.06);
+            --shadow-md: 0 8px 32px rgba(30, 58, 42, 0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* font-family: 'DM Sans', sans-serif; */
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+
+            overflow-x: hidden;
+            /* Hide scrollbar - Firefox */
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling on iOS */
+        }
+
+        /* Hide scrollbar - Chrome, Safari, Edge */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        /* ─── READ PROGRESS BAR ────────────────────── */
+        .progress-bar-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 9999;
+        }
+
+        #read-progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--sage), var(--forest));
+            transition: width 0.1s linear;
+        }
+
+        /* ─── ARTICLE HERO ─────────────────────────── */
+        .article-hero {
+            background: var(--forest);
+            padding: 5rem 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(122, 170, 130, 0.15) 0%, transparent 65%);
+            border-radius: 50%;
+        }
+
+        /* Breadcrumb */
+        .article-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 2rem;
+        }
+
+        .article-breadcrumb a {
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-breadcrumb a:hover {
+            color: var(--sage-light);
+        }
+
+        .article-breadcrumb .sep {
+            opacity: 0.3;
+        }
+
+        .article-breadcrumb .current {
+            color: var(--sage-light);
+        }
+
+        /* Category pill */
+        .article-category-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(122, 170, 130, 0.15);
+            border: 1px solid rgba(122, 170, 130, 0.3);
+            color: var(--sage-light);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Article title */
+        .article-hero-title {
+            /* font-family: 'Fraunces', serif; */
+            font-family: 'Roboto', sans-serif;
+
+            font-size: clamp(2rem, 4.5vw, 3.4rem);
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            max-width: 820px;
+        }
+
+        .article-hero-title em {
+            font-style: italic;
+            color: var(--sage-light);
+        }
+
+        /* Article meta row */
+        .article-meta-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 0.5rem;
+        }
+
+        .author-block {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sage), var(--moss));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.2;
+        }
+
+        .author-role {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .meta-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .meta-pill i {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .share-btn {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.14);
+            color: white;
+        }
+
+        /* Hero image - bleeds out of dark section */
+        .hero-image-bleed {
+            margin-top: 2.5rem;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-image-bleed img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.72rem;
+            padding: 0.5rem 1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* ─── ARTICLE BODY ─────────────────────────── */
+        .article-body-section {
+            padding: 4rem 0 5rem;
+            background: var(--cream);
+        }
+
+        /* Key stats bar */
+        .key-stats-bar {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-val {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--forest);
+            line-height: 1;
+        }
+
+        .stat-val span {
+            font-size: 1.1rem;
+        }
+
+        .stat-desc {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: var(--border);
+            align-self: stretch;
+        }
+
+        /* Article prose */
+        .article-prose {
+            max-width: 760px;
+        }
+
+        .article-prose p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #3a4e42;
+            margin-bottom: 1.75rem;
+        }
+
+        .article-prose h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--forest);
+            margin: 2.5rem 0 1.25rem;
+            line-height: 1.2;
+        }
+
+        .article-prose h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--forest);
+            margin: 2rem 0 0.85rem;
+        }
+
+        /* Pull quote */
+        .pull-quote {
+            border-left: 4px solid var(--sage);
+            background: var(--sage-pale);
+            border-radius: 0 16px 16px 0;
+            padding: 1.75rem 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .pull-quote p {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--forest);
+            line-height: 1.5;
+            margin: 0 0 0.5rem !important;
+        }
+
+        .pull-quote cite {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Inline image */
+        .inline-img-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .inline-img-wrap img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .inline-img-caption {
+            background: var(--card-bg);
+            padding: 0.75rem 1.25rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Key takeaways box */
+        .takeaways-box {
+            background: var(--forest);
+            border-radius: 16px;
+            padding: 2rem 2rem 1.75rem;
+            margin: 2.5rem 0;
+            color: white;
+        }
+
+        .takeaways-box h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--sage-light);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .takeaway-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            margin-bottom: 0.9rem;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .takeaway-check {
+            width: 20px;
+            height: 20px;
+            background: rgba(122, 170, 130, 0.2);
+            border: 1px solid rgba(122, 170, 130, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-size: 0.6rem;
+            color: var(--sage-light);
+        }
+
+        /* ─── SIDEBAR ──────────────────────────────── */
+        .sidebar-sticky {
+            position: sticky;
+            top: 5rem;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(220, 232, 222, 0.6);
+        }
+
+        .widget-heading {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--forest);
+            margin-bottom: 1.1rem;
+            padding-bottom: 0.65rem;
+            border-bottom: 1.5px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .widget-heading i {
+            color: var(--sage);
+        }
+
+        /* Table of contents */
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            border-bottom: 1px solid #f0ede8;
+        }
+
+        .toc-list li:last-child {
+            border-bottom: none;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 0;
+            text-decoration: none;
+            font-size: 0.83rem;
+            color: var(--muted);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .toc-list a:hover,
+        .toc-list a.active {
+            color: var(--forest);
+        }
+
+        .toc-list a.active {
+            font-weight: 600;
+        }
+
+        .toc-num {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--sage);
+            width: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Related articles */
+        .related-card {
+            display: flex;
+            gap: 0.85rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0ede8;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .related-card:last-child {
+            border-bottom: none;
+        }
+
+        .related-card:hover {
+            opacity: 0.75;
+        }
+
+        .related-thumb {
+            width: 64px;
+            height: 64px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .related-title {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--forest);
+            line-height: 1.35;
+            margin-bottom: 0.25rem;
+        }
+
+        .related-date {
+            font-size: 0.7rem;
+            color: var(--muted);
+        }
+
+        /* Tags widget */
+        .tags-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag-chip {
+            display: inline-block;
+            background: var(--sage-pale);
+            color: var(--moss);
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .tag-chip:hover {
+            background: var(--forest);
+            color: white;
+        }
+
+        /* ─── ARTICLE FOOTER (share + back) ────────── */
+        .article-footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        .share-row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .social-icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--sage-pale);
+            color: var(--moss);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-icon-btn:hover {
+            background: var(--forest);
+            color: white;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1.5px solid var(--border);
+            color: var(--forest);
+            background: transparent;
+            padding: 0.55rem 1.3rem;
+            border-radius: 40px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: var(--forest);
+            color: white;
+            border-color: var(--forest);
+        }
+
+        /* ─── MORE STORIES ─────────────────────────── */
+        .more-stories-section {
+            background: var(--warm-white);
+            padding: 4rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-label h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--forest);
+            white-space: nowrap;
+        }
+
+        .section-label-line {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .more-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(220, 232, 222, 0.6);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .more-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+
+        .more-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .more-card:hover .more-card-img {
+            transform: scale(1.04);
+        }
+
+        .more-card-img-wrap {
+            overflow: hidden;
+        }
+
+        .more-card-body {
+            padding: 1.25rem 1.4rem 1.25rem;
+        }
+
+        .more-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.4rem;
+        }
+
+        .more-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--forest);
+            line-height: 1.35;
+            margin-bottom: 0.5rem;
+        }
+
+        .more-date {
+            font-size: 0.72rem;
+            color: var(--muted);
+        }
+
+        /* ─── ANIMATIONS ───────────────────────────── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ───────────────────────────── */
+        @media (max-width: 991px) {
+            .sidebar-sticky {
+                position: static;
+            }
+
+            .stat-divider {
+                display: none;
+            }
+
+            .key-stats-bar {
+                gap: 1.5rem;
+            }
+
+            .hero-image-bleed img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .article-hero-title {
+                font-size: 2rem;
+            }
+
+            .article-meta-row {
+                gap: 0.85rem;
+            }
+
+            .share-btn {
+                display: none;
+            }
+
+            .hero-image-bleed img {
+                height: 220px;
+            }
+
+            .article-prose p {
+                font-size: 0.97rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- READ PROGRESS -->
+    <div class="progress-bar-wrap">
+        <div id="read-progress"></div>
+    </div>
+
+    <!-- NAVBAR (unchanged) -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container header-pill">
+            <a class="navbar-brand ms-2" href="/index.html">
+                <img src="assets/images/logo2.png" height="40">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/brands.html">Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/CareersPages/careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="/CompanyInformation/Board_of_Directors.html">Investors</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-start d-md-none d-sm-block" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Team24</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul>
+                    <li class="nav-item"><a class="dropdown-item" href="#">Home</a></li>
+                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item" href="brands.html">Brands</a></li>
+                    <li><a class="dropdown-item" href="/CareersPages/careers.html">Careers</a></li>
+                    <li><a class="dropdown-item" href="/CompanyInformation/Board_of_Directors.html">Investors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+         ARTICLE HERO
+    ══════════════════════════════════════════════════ -->
+    <section class="article-hero">
+        <div class="container">
+
+
+            <!-- Category & Title -->
+            <!-- <div class="article-category-pill mt-4">
+                <i class="bi bi-megaphone-fill"></i> Company Story
+            </div> -->
+            <h1 class="article-hero-title mt-4">
+                Beverage Trends in India:<br>
+                The Shift Towards <em>Health-Conscious</em> Choices
+            </h1>
+
+            <!-- Meta -->
+            <div class="article-meta-row">
+                <!-- <div class="author-block">
+                    <div class="author-avatar">T</div>
+                    <div>
+                        <div class="author-name">Team24 Editorial</div>
+                        <div class="author-role">Market Intelligence Desk</div>
+                    </div>
+                </div> -->
+                <div class="meta-pill"><i class="bi bi-calendar3"></i> April 2, 2026</div>
+                <div class="meta-pill"><i class="bi bi-clock"></i> 8 min read</div>
+                <div class="meta-pill"><i class="bi bi-eye"></i> 4.2k views</div>
+                <button class="share-btn"
+                    onclick="navigator.share ? navigator.share({title: document.title, url: location.href}) : alert('Link copied!')">
+                    <i class="bi bi-share"></i> Share
+                </button>
+            </div>
+
+            <!-- Hero image -->
+            <div class="hero-image-bleed">
+                <img src="/assets/images/news/news-1.avif" alt="Beverages in India — Health Conscious Shift">
+                <div class="image-caption"><i class="bi bi-camera me-1"></i> The evolving beverage aisle — functional
+                    drinks lead India's new health wave.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ARTICLE BODY
+    ══════════════════════════════════════════════════ -->
+    <section class="article-body-section" id="article-body">
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- ── MAIN ARTICLE ───────────────────── -->
+                <div class="col-lg-8">
+                    <div class="article-prose">
+
+                        <p>India's beverage market stands at a fascinating crossroads. For decades, the conversation was
+                            dominated by sugary carbonated drinks and mass-market teas. Today, a well-informed,
+                            health-aware consumer is reshaping every shelf, every menu, and every production line across
+                            the country. The shift is not subtle — it is seismic.</p>
+
+                        <p>At Team24, we have had a front-row seat to this transformation. From our distribution network
+                            spanning over 14 states to our brand partnerships with emerging functional drink makers, the
+                            signals are unmistakable: Indians are drinking differently, and they are demanding more from
+                            the beverages they consume every day.</p>
+
+                        <!-- Key Takeaways Box -->
+                        <div class="takeaways-box fade-up">
+                            <h4><i class="bi bi-lightning-charge-fill"></i> Key Takeaways</h4>
+                            <div class="takeaway-item">
+                                <span class="takeaway-check"><i class="bi bi-check"></i></span>
+                                <span>Functional beverages — drinks with added vitamins, electrolytes, or adaptogens —
+                                    are the fastest-growing segment in India's FMCG landscape.</span>
+                            </div>
+                            <div class="takeaway-item">
+                                <span class="takeaway-check"><i class="bi bi-check"></i></span>
+                                <span>Post-pandemic health consciousness has permanently elevated consumer expectations
+                                    around ingredients, sugar content, and sourcing transparency.</span>
+                            </div>
+                            <div class="takeaway-item">
+                                <span class="takeaway-check"><i class="bi bi-check"></i></span>
+                                <span>Regional flavours — kokum, aam panna, jal jeera — are finding new commercial
+                                    relevance as premiumised RTD (Ready-to-Drink) products.</span>
+                            </div>
+                            <div class="takeaway-item">
+                                <span class="takeaway-check"><i class="bi bi-check"></i></span>
+                                <span>Sustainability in packaging is no longer optional — eco-friendly packaging now
+                                    directly influences purchase decisions for 41% of urban buyers.</span>
+                            </div>
+                        </div>
+
+                        <h2 id="s1">The Rise of Functional Beverages</h2>
+
+                        <p>The functional beverage segment — encompassing energy drinks, immunity boosters, gut health
+                            formulations, and adaptogen-infused waters — has seen an 18% year-on-year growth in India,
+                            according to category tracking data. This is not a trend confined to metro cities. Tier-2
+                            and Tier-3 towns are increasingly part of this story, driven by rising disposable incomes
+                            and a youth demographic that actively seeks performance nutrition.</p>
+
+                        <p>Brands like Paper Boat, RAW Pressery, and a new wave of D2C players have normalised the
+                            premium end of this spectrum. Consumers are reading labels. They are comparing sugar
+                            content. They are Googling what "ashwagandha extract" does before picking it off a shelf.
+                            The informed Indian consumer has arrived.</p>
+
+                        <!-- Pull Quote -->
+                        <div class="pull-quote fade-up">
+                            <p>"The Indian consumer no longer buys a drink to quench thirst alone — they are buying a
+                                feeling, a function, and increasingly, a value system."</p>
+                            <cite>— Team24 Market Intelligence Report, 2026</cite>
+                        </div>
+
+                        <h2 id="s2">Regional Flavours Find Premium Ground</h2>
+
+                        <p>One of the most exciting developments in Indian beverages is the resurgence of traditional
+                            regional flavours in modern, premium formats. Kokum sherbet from Goa and the Konkan coast,
+                            aam panna from Maharashtra, jal jeera from North India — these are not novelties. They are
+                            ancient recipes being repackaged for the contemporary consumer.</p>
+
+                        <p>What makes this particularly powerful is the authenticity edge that local brands carry. When
+                            a Goan kokum drink is positioned as an antioxidant-rich, climate-appropriate refresher with
+                            zero artificial additives, it does not compete with cola — it operates in an entirely
+                            different aspirational space.</p>
+
+                        <!-- Inline Image -->
+                        <div class="inline-img-wrap fade-up">
+                            <img src="/assets/images/news/news-8.avif" alt="Regional Beverages India">
+                            <div class="inline-img-caption">
+                                <i class="bi bi-image"></i> Traditional Indian ingredients are finding new life in
+                                modern beverage formats.
+                            </div>
+                        </div>
+
+                        <h2 id="s3">Team24's Strategic Response</h2>
+
+                        <p>For Team24, this shift represents both an opportunity and a responsibility. Our distribution
+                            infrastructure, built over years across India's diverse markets, positions us uniquely to
+                            accelerate promising new-age beverage brands into mainstream retail. But more than
+                            logistics, the opportunity is about curation.</p>
+
+                        <p>We are actively working with brands that align with three non-negotiables: clean ingredient
+                            sourcing, responsible packaging, and honest marketing. The era of empty health claims on
+                            beverage labels is drawing to a close, and we believe that brands who build genuine
+                            credibility now will command disproportionate loyalty in the years ahead.</p>
+
+                        <h2 id="s4">Sustainability as a Core Metric</h2>
+
+                        <p>No conversation about India's evolving beverage landscape is complete without addressing the
+                            sustainability imperative. The country generates enormous volumes of single-use plastic
+                            waste from beverage packaging, and regulatory pressure — alongside genuine consumer concern
+                            — is accelerating a shift toward recyclable, biodegradable, and refillable formats.</p>
+
+                        <p>Team24 has committed to achieving net-zero packaging impact across our partner portfolio by
+                            2030. This is not a marketing statement — it is a supply-chain commitment. We are actively
+                            piloting glass-return programmes in select markets and working with co-packers who have
+                            invested in lightweighting technology to reduce material use without compromising shelf
+                            integrity.</p>
+
+                        <h2 id="s5">What Comes Next</h2>
+
+                        <p>The next three to five years in Indian beverages will be defined by a few macro forces: the
+                            continued premiumisation of everyday drinks, the maturation of D2C distribution as a viable
+                            long-term channel, and the potential for regulatory clarity around health claims that could
+                            reshape how brands communicate benefits.</p>
+
+                        <p>Team24 is positioned at the intersection of all three. We see our role not just as
+                            distributors, but as category builders — helping brands navigate the complex, vast, and
+                            breathtakingly diverse Indian market with the agility, intelligence, and partnerships that
+                            create lasting value.</p>
+
+                        <p>The Indian consumer is ready. The question is whether brands and distributors will rise to
+                            meet them.</p>
+
+                    </div><!-- /article-prose -->
+
+                    <!-- Article Footer Row -->
+                    <div class="article-footer-row">
+                        <div class="share-row">
+                            <span>Share this story:</span>
+                            <a href="#" class="social-icon-btn" title="Share on LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-icon-btn" title="Share on Twitter"><i
+                                    class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="social-icon-btn" title="Share on WhatsApp"><i
+                                    class="bi bi-whatsapp"></i></a>
+                            <a href="#" class="social-icon-btn" title="Copy link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        <a href="/index.html" class="back-btn">
+                            <i class="bi bi-arrow-left"></i> Back to News Room
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── SIDEBAR ─────────────────────────── -->
+                <div class="col-lg-4">
+                    <div class="sidebar-sticky">
+
+                        <!-- Table of Contents -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-heading"><i class="bi bi-list-ul"></i> In This Article</h4>
+                            <ul class="toc-list" id="toc">
+                                <li><a href="#s1" class="active"><span class="toc-num">01</span> Rise of Functional
+                                        Beverages</a></li>
+                                <li><a href="#s2"><span class="toc-num">02</span> Regional Flavours Go Premium</a></li>
+                                <li><a href="#s3"><span class="toc-num">03</span> Team24's Strategic Response</a></li>
+                                <li><a href="#s4"><span class="toc-num">04</span> Sustainability as a Core Metric</a>
+                                </li>
+                                <li><a href="#s5"><span class="toc-num">05</span> What Comes Next</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-heading"><i class="bi bi-newspaper"></i> More Stories</h4>
+
+                            <a href="#" class="related-card">
+                                <img src="/assets/images/news/news-6.avif" alt="Sustainability" class="related-thumb">
+                                <div>
+                                    <div class="related-title">Sustainable Practices in Beverage Manufacturing</div>
+                                    <div class="related-date"><i class="bi bi-calendar3 me-1"></i>Mar 2, 2026</div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="related-card">
+                                <img src="/assets/images/news/news-4.avif" alt="CSD" class="related-thumb">
+                                <div>
+                                    <div class="related-title">The Fizzy Frenzy: Decoding India's CSD Market</div>
+                                    <div class="related-date"><i class="bi bi-calendar3 me-1"></i>Mar 15, 2026</div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="related-card">
+                                <img src="/assets/images/news/news-7.avif" alt="Global" class="related-thumb">
+                                <div>
+                                    <div class="related-title">Beverage Giants: India vs. Abroad</div>
+                                    <div class="related-date"><i class="bi bi-calendar3 me-1"></i>Feb 22, 2026</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-heading"><i class="bi bi-tags"></i> Topics</h4>
+                            <div class="tags-wrap">
+                                <a href="#" class="tag-chip">Health Beverages</a>
+                                <a href="#" class="tag-chip">FMCG India</a>
+                                <a href="#" class="tag-chip">Functional Drinks</a>
+                                <a href="#" class="tag-chip">Sustainability</a>
+                                <a href="#" class="tag-chip">RTD</a>
+                                <a href="#" class="tag-chip">Market Trends</a>
+                                <a href="#" class="tag-chip">Team24</a>
+                                <a href="#" class="tag-chip">Packaging</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         MORE STORIES
+    ══════════════════════════════════════════════════ -->
+    <section class="more-stories-section">
+        <div class="container">
+            <div class="section-label">
+                <h3>More from News Room</h3>
+                <div class="section-label-line"></div>
+                <a href="news-room.html"
+                    style="white-space:nowrap; font-size:0.82rem; color:var(--sage); font-weight:600; text-decoration:none;">View
+                    All <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="more-card">
+                        <div class="more-card-img-wrap">
+                            <img src="/assets/images/news/news-8.avif" alt="Tea" class="more-card-img">
+                        </div>
+                        <div class="more-card-body" style="cursor: pointer;">
+                            <div class="more-tag">Tea Industry</div>
+                            <div class="more-title">A Journey Through Tea Production: From Leaf to Cup</div>
+                            <div class="more-date"><i class="bi bi-calendar3 me-1"></i>Mar 28, 2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="more-card">
+                        <div class="more-card-img-wrap">
+                            <img src="/assets/images/news/news-5.avif" alt="Coffee" class="more-card-img">
+                        </div>
+                        <div class="more-card-body">
+                            <div class="more-tag">Coffee Culture</div>
+                            <div class="more-title">Exploring the Art of Coffee Brewing: Techniques & Trends</div>
+                            <div class="more-date"><i class="bi bi-calendar3 me-1"></i>Mar 10, 2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="more-card">
+                        <div class="more-card-img-wrap">
+                            <img src="/assets/images/news/news-3.avif" alt="Cocktail" class="more-card-img">
+                        </div>
+                        <div class="more-card-body">
+                            <div class="more-tag">Mixology</div>
+                            <div class="more-title">Crafting the Perfect Cocktail at Home: Expert Tips</div>
+                            <div class="more-date"><i class="bi bi-calendar3 me-1"></i>Mar 20, 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (unchanged) -->
+    <footer class="footer">
+        <div class="footer-top-accent"></div>
+        <div class="container">
+            <div class="row gy-4 gy-lg-0">
+                <div class="col-md-4 text-center text-md-start">
+                    <div class="footer-logo-wrapper">
+                        <img src="/assets/images/footer-img/footer-logo.avif" class="footer-logo img-fluid"
+                            alt="Team24 Consumer Product Ltd." />
+                    </div>
+                    <p class="footer-text mt-3">Elevating everyday experiences with premium quality and innovation.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">NAVIGATION</h5>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Our Story</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/brands.html">Brands</a></li>
+                        <li><a href="/CareersPages/careers.html">Careers</a></li>
+                        <li><a href="/CompanyInformation/Board_of_Directors.html">Investors</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <h5 class="footer-heading">REGISTERED OFFICE</h5>
+                    <div class="office-address">
+                        <p class="footer-text">
+                            <span class="icon-location"></span> Team24 Consumer Products Ltd.<br>
+                            P12, 4th Floor, Silvio Heights<br>
+                            St. Inez Panjim - 403001,<br>
+                            North Goa, Goa
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <p class="footer-text contact-line">
+                            <span class="icon-phone"></span>
+                            <a href="tel:+919028700000" class="contact-link">+91 9028700000</a>
+                        </p>
+                        <p class="footer-text contact-line">
+                            <span class="icon-email"></span>
+                            <a href="mailto:info@team24.in" class="contact-link">info@team24.in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Team24 Consumer Products Ltd. All Rights Reserved</div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ── Reading progress bar ──────────────────────
+        window.addEventListener('scroll', () => {
+            const doc = document.documentElement;
+            const scrollTop = doc.scrollTop || document.body.scrollTop;
+            const scrollHeight = doc.scrollHeight - doc.clientHeight;
+            const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            document.getElementById('read-progress').style.width = pct + '%';
+        });
+
+        // ── Fade-up on scroll ─────────────────────────
+        const fadeEls = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        fadeEls.forEach(el => observer.observe(el));
+
+        // ── Active TOC highlight on scroll ───────────
+        const sections = ['s1', 's2', 's3', 's4', 's5'].map(id => document.getElementById(id));
+        const tocLinks = document.querySelectorAll('#toc a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (sec && window.scrollY >= sec.offsetTop - 140) current = sec.id;
+            });
+            tocLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+        });
+
+        // ── Smooth anchor scroll ──────────────────────
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

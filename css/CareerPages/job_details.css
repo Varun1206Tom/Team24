@@ -22,6 +22,36 @@ body::-webkit-scrollbar {
     border-radius: 10px;
 }
 
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    
+    background: rgba(0, 0, 0, 0.2); /* optional dark overlay */
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    
+    z-index: 1000;
+}
+
+/* active state */
+#blur-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.apply-wrapper {
+    position: relative;
+    z-index: 1100; /* higher than overlay */
+}
+
 /* Main Section */
 .job-title-section {
     background-color: #DCC1FF;
@@ -32,6 +62,11 @@ body::-webkit-scrollbar {
     /* vertical center */
     align-items: center;
     padding: 160px 200px;
+}
+
+.blur-class {
+    filter: blur(2px);
+    opacity: 0.6;
 }
 
 /* Tablet */
@@ -423,6 +458,8 @@ body::-webkit-scrollbar {
     color: white;
     border-radius: 25px;
     padding: 8px 20px;
+    filter: blur(0) !important;
+    opacity: 1 !important;
 }
 
 /* ARROW BUTTON */
