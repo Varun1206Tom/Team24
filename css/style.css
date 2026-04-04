@@ -27,8 +27,8 @@ body::-webkit-scrollbar {
 }
 
 .scroll-step {
-    opacity: 0.3;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
     will-change: transform, opacity;
     transition: opacity 0.5s ease, transform 0.6s ease;
 }
@@ -41,12 +41,12 @@ body::-webkit-scrollbar {
 
 /* Stack scroll steps so they overlap exactly */
 .section .container.text-center {
-    display: grid;
-    place-items: center;
+    /* display: grid;
+    place-items: center; */
 }
 
 .section .container.text-center .scroll-step {
-    grid-area: 1 / 1;
+    /* grid-area: 1 / 1; */
     margin: 0;
 }
 
@@ -159,6 +159,13 @@ body::-webkit-scrollbar {
     color: white;
 }
 
+@media screen and (max-width: 768px) {
+    .koku-description {
+        line-height: 17px;
+    }
+}
+
+
 /* .koku-slider{
     width: fit-content !important;
 } */
@@ -183,6 +190,22 @@ body::-webkit-scrollbar {
     background-position: center;
     position: relative;
     overflow: hidden;
+}
+
+@media screen and ( max-width: '768px' ) {
+    .koku-slider .category-card {
+        height: 300px;
+        width: 100%;
+        border-radius: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .koku-slider {
+        left: 10%;
+    }
 }
 
 .koku-slider .slick-track {

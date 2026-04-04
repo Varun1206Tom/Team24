@@ -55,12 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Pre-set step visual states
         // Initially, the first text is fully visible and centered. The next text sits below it slightly faded.
-        gsap.set(steps, { 
-            opacity: 0.2,
-            y: isMobile ? 80 : 40
-        });
-        gsap.set(steps[0], { opacity: 1, y: 0 });
-steps[0].classList.add("active");
+        // gsap.set(steps, { 
+        //     opacity: 0.2,
+        //     y: isMobile ? 80 : 40
+        // });
+        // gsap.set(steps[0], { opacity: 1, y: 0 });
+        // steps[0].classList.add("active");
         // Remove CSS native snap to fix bottom-to-top scrolling and sticky-lock bug
         document.documentElement.style.scrollSnapType = "none";
         section.style.scrollSnapAlign = "none";
@@ -82,44 +82,44 @@ steps[0].classList.add("active");
         });
 
         // The text transitions in the FIRST 8% of the scroll overlap, making it slightly slower than before
-        const textDuration = isMobile ? 0.08 : 0.08;
+        // const textDuration = isMobile ? 0.08 : 0.08;
 
-        for (let i = 1; i < totalSteps; i++) {
-            // The first text smoothly moves slightly upward (not completely disappear)
-            tl.to(steps[i - 1], {
-                opacity: 0.2,
-                y: isMobile ? -80 : -60,
-                // y: -60, // Moves slightly upward out of the way
-                duration: textDuration,
-                ease: "power2.inOut",
-                onStart: () => {
-        steps[i - 1].classList.remove("active");
-        steps[i].classList.add("active");
-    },
-    onReverseComplete: () => {
-        steps[i - 1].classList.add("active");
-        steps[i].classList.remove("active");
-    }
-                // onUpdate: function () {
-                //     if (this.progress() > 0.5) {
-                //         steps[i - 1].classList.remove("active");
-                //         steps[i].classList.add("active");
-                //     } else {
-                //         steps[i - 1].classList.add("active");
-                //         steps[i].classList.remove("active");
-                //     }
-                // }
+        // for (let i = 1; i < totalSteps; i++) {
+        //     // The first text smoothly moves slightly upward (not completely disappear)
+        //     tl.to(steps[i - 1], {
+        //         opacity: 0.2,
+        //         y: isMobile ? -80 : -60,
+        //         // y: -60, // Moves slightly upward out of the way
+        //         duration: textDuration,
+        //         ease: "power2.inOut",
+        //         onStart: () => {
+        // steps[i - 1].classList.remove("active");
+        // steps[i].classList.add("active");
+        // },
+        // onReverseComplete: () => {
+        // steps[i - 1].classList.add("active");
+        // steps[i].classList.remove("active");
+        // }
+        //         // onUpdate: function () {
+        //             // if (this.progress() > 0.5) {
+        //             //     steps[i - 1].classList.remove("active");
+        //             //     steps[i].classList.add("active");
+        //             // } else {
+        //             //     steps[i - 1].classList.add("active");
+        //             //     steps[i].classList.remove("active");
+        //             // }
+        //         // }
                 
-            });
+        //     });
 
-            // The second text fades in and slides up into the exact position where the first text was
-            tl.to(steps[i], {
-                opacity: 1,
-                y: 0,
-                duration: textDuration,
-                ease: "power2.inOut"
-            }, "<");
-        }
+        //     // The second text fades in and slides up into the exact position where the first text was
+        //     tl.to(steps[i], {
+        //         opacity: 1,
+        //         y: 0,
+        //         duration: textDuration,
+        //         ease: "power2.inOut"
+        //     }, "<");
+        // }
 
         // Fill out the remaining 92% of the distance so the next section creeps up beautifully slowly while text is stable
         tl.to({}, { duration: 0.92 });
