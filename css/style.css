@@ -153,8 +153,8 @@ body::-webkit-scrollbar {
 
 /* CARD */
 .brand-cards {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .brand-card {
@@ -235,7 +235,13 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 420px) {
     .koku-slider {
         left: 0% !important;
+        /* background-color: red; */
+        width: 400px
     }
+
+    .slick-slide {
+    padding-right: 10px;
+}
 }
 
 .koku-slider {
@@ -461,9 +467,9 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 760px) {
 
-    /* .dist-img-col-section{
-        gap: 20px !important;
-    } */
+    .dist-img{
+        width: 800px;
+    }
     .distribution-section {
         height: 70vh;
         padding: 80px;

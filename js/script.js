@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     entry.target.classList.remove("visible");
                 }
             });
-        }, { threshold: 0.7 }); // Triggers when 60% of the element is visible
+        }, { threshold: 0.5 }); // Triggers when 60% of the element is visible
 
         animatedElements.forEach(el => scrollObserver.observe(el));
     }
