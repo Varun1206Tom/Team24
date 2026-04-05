@@ -235,11 +235,20 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 420px) {
     .koku-slider {
         left: 0% !important;
-        
+    }
+
+    .category-card {
+        margin-left: 20px;
     }
 
     .slick-slide {
-    padding-right: 10px;
+        padding-right: 10px;
+        padding: 0 8px;
+
+    }
+
+.koku-slider .slick-list {
+    margin: 0 -8px;
 }
 }
 
@@ -262,9 +271,9 @@ body::-webkit-scrollbar {
 @media screen and ( max-width: '768px' ) {
     .koku-slider .category-card {
         height: 300px;
-        width: 100%;
+        width: 80%;
         border-radius: 20px;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
