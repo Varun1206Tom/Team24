@@ -1,0 +1,126 @@
+/* Navbar */
+.custom-navbar {
+    /* position: absolute; */
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center !important;
+    /* center navbar */
+}
+
+.header-pill {
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 6px 18px;
+    max-width: 1100px;
+    /* control navbar width */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.01);
+}
+
+.header-pill {
+    width: 80%;
+}
+
+@media screen and (min-width: 320px) {
+    .header-pill {
+        width: 92%;
+        padding: 8px 14px;
+        border-radius: 40px;
+    }
+
+    .navbar-brand img {
+        height: 28px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .custom-navbar {
+        width: 100%;
+    }
+}
+
+.navbar-nav .nav-link {
+    color: #0a3c3c;
+    font-weight: 500;
+    padding: 5px 12px;
+    /* reduced */
+    border-radius: 30px;
+    font-size: 14px;
+    /* smaller text */
+}
+
+.navbar-brand img {
+    height: 40px;
+    
+    /* reduced from 40 */
+}
+
+.navbar-nav .nav-link.active {
+    background: #cdeee4;
+    width: 100px;
+    text-align: center;
+}
+
+
+
+.navbar-toggler {
+    padding: 4px 8px;
+}
+
+.navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.offcanvas {
+    background-color: #f8fdfb;
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-body {
+    padding: 10px;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.offcanvas-title {
+    font-weight: 600;
+    color: #0a3c3c;
+}
+
+.offcanvas-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.offcanvas-body ul li {
+    margin-bottom: 8px;
+}
+
+.offcanvas-body .dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0a3c3c;
+    transition: 0.3s;
+}
+
+.offcanvas-body .dropdown-item:hover {
+    background-color: #cdeee4;
+    transform: translateX(5px);
+}
+
+.offcanvas-body .dropdown-item.active {
+    background-color: #cdeee4;
+    font-weight: 600;
+}
