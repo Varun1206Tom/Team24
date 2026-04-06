@@ -94,6 +94,17 @@ body::-webkit-scrollbar {
     background-position: center;
 }
 
+.news-link {
+    display: block;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.news-link:hover {
+    transform: translateY(-2px);
+}
+
 @media screen and (max-width: 420px) {
     .news-section {
         padding: 0;
@@ -101,10 +112,12 @@ body::-webkit-scrollbar {
 
     .news-title-text {
         font-size: 15px;
+        font-weight: 600;
     }
 
     .news-desc-text {
         font-size: 12px;
+        line-height: 14px;
     }
 }
 
@@ -115,6 +128,14 @@ body::-webkit-scrollbar {
     object-fit: contain;
     /* object-fit: cover; */
     /* display: block; */
+}
+
+.news-title-text {
+    font-size: 17px;
+}
+
+.news-desc-text {
+    font-size: 14px;
 }
 
 /* ON BOARD SECTION  */

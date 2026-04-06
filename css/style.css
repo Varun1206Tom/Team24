@@ -66,9 +66,16 @@ body::-webkit-scrollbar {
     /* 👈 GPU acceleration */
 }
 
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 40px 20px;
+    }
+    
+}
+
 /* HERO */
 .hero-section {
-    height: 100vh;
+    height: 105vh;
     position: sticky;
     top: 0;
     display: flex;
@@ -207,6 +214,18 @@ body::-webkit-scrollbar {
     background-image: url("../assets/images/story4-bg.avif");
     color: white;
     min-height: 110vh;
+
+    /* height: 105vh; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
 }
 
 .koku-img {
@@ -233,8 +252,13 @@ body::-webkit-scrollbar {
 } */
 
 @media screen and (max-width: 420px) {
+    .koku-section {
+        padding: 40px 20px;
+    }
     .koku-slider {
-        left: 0% !important;
+        /* left: 10%; */
+        
+        
     }
 
     .category-card {
@@ -408,6 +432,10 @@ body::-webkit-scrollbar {
         padding-bottom: 40px;
     }
 
+    .tap-house-slider {
+        left: 10% !important;
+    }
+
     .tap-img {
         width: 260px;
     }
@@ -437,7 +465,7 @@ body::-webkit-scrollbar {
 .distribution-section {
     background-color: #EBF6EE;
     /* padding: 100px 0 120px; */
-    height: 80vh;
+    min-height: 110vh;
     position: relative;
     top: 0;
     display: flex;
@@ -478,9 +506,16 @@ body::-webkit-scrollbar {
     .dist-img{
         width: 800px;
     }
+
+    .dist-img-mobile {
+        width: 100%;
+        height: auto;
+        
+    }
+
     .distribution-section {
         height: 70vh;
-        padding: 80px;
+        padding: 30px;
     }
 }
 
