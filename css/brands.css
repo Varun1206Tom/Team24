@@ -48,6 +48,10 @@ body::-webkit-scrollbar {
     /* horizontal center */
 }
 
+.brand-title {
+    font-size: 14px;
+}
+
 .product-chips {
     display: flex;
     justify-content: center;
@@ -145,5 +149,9 @@ body::-webkit-scrollbar {
 
     .partners-block h3 {
         font-size: 20px;
+    }
+
+    .partners-block {
+        min-height: 110vh;
     }
 }
