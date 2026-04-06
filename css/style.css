@@ -66,6 +66,13 @@ body::-webkit-scrollbar {
     /* 👈 GPU acceleration */
 }
 
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 40px 20px;
+    }
+    
+}
+
 /* HERO */
 .hero-section {
     height: 105vh;
@@ -249,7 +256,9 @@ body::-webkit-scrollbar {
         padding: 40px 20px;
     }
     .koku-slider {
-        left: 10%;
+        /* left: 10%; */
+        
+        
     }
 
     .category-card {
@@ -421,6 +430,10 @@ body::-webkit-scrollbar {
         min-height: auto;
         padding-top: 80px;
         padding-bottom: 40px;
+    }
+
+    .tap-house-slider {
+        left: 10% !important;
     }
 
     .tap-img {
