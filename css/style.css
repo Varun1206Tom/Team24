@@ -506,9 +506,16 @@ body::-webkit-scrollbar {
     .dist-img{
         width: 800px;
     }
+
+    .dist-img-mobile {
+        width: 100%;
+        height: auto;
+        
+    }
+
     .distribution-section {
         height: 70vh;
-        padding: 80px;
+        padding: 30px;
     }
 }
 

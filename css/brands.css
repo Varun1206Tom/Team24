@@ -147,11 +147,77 @@ body::-webkit-scrollbar {
         max-height: 90px;
     }
 
+    .partner-mobile-logo{
+         width: 100%;
+        height: auto;
+        
+    }
+
     .partners-block h3 {
         font-size: 20px;
     }
 
     .partners-block {
         min-height: 110vh;
+    }
+}
+
+/* CARD */
+.brand-cards {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.brand-card {
+    height: 250px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* DARK OVERLAY */
+.brand-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+/* TITLE */
+.brand-overlay h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* HOVER EFFECT */
+.brand-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.brand-card:hover .brand-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+}
+
+@media screen and (max-width: 768px) {
+    .next-generation-section {
+        position: relative; /* remove sticky */
+        min-height: auto;   /* allow natural height */
+        padding: 40px 0;
+    }
+    .brand-cards {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .brand-card {
+        height: 170px !important;
     }
 }
