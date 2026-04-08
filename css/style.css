@@ -501,6 +501,10 @@ body::-webkit-scrollbar {
     transition: transform 0.25s ease;
 }
 
+.dist-img:hover  {
+    transform: scale(1.05);
+}
+
 @media screen and (max-width: 760px) {
 
     .dist-img{
