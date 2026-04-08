@@ -1,0 +1,69 @@
+{
+  "categories": ["Juice", "Carbonated Drinks", "Sugar Replacer", "Ready to Drink"],
+  "products": [
+    {
+      "id": "p1",
+      "title": "Kokum Sparkle - Zero Sugar",
+      "image": "/assets/images/brands/product-range/product-1.avif",
+      "alt": "Kokum Sparkle Zero Sugar",
+      "category": "Carbonated Drinks",
+      "brand": "Koku"
+    },
+    {
+      "id": "p2",
+      "title": "Kokum Juice - Classic",
+      "image": "/assets/images/brands/product-range/product-2.avif",
+      "alt": "Kokum Juice",
+      "category": "Juice",
+      "brand": "Koku"
+    },
+    {
+      "id": "p3",
+      "title": "Nature Ola Cola - Zero",
+      "image": "/assets/images/brands/product-range/product-3.avif",
+      "alt": "Nature Ola Cola",
+      "category": "Carbonated Drinks",
+      "brand": "Nature Ola"
+    },
+    {
+      "id": "p4",
+      "title": "LuvSweet - Sugar Replacer Sachet",
+      "image": "/assets/images/brands/product-range/product-4.avif",
+      "alt": "LuvSweet Sachet",
+      "category": "Sugar Replacer",
+      "brand": "LuvSweet"
+    },
+    {
+      "id": "p5",
+      "title": "Namaste Chai - Kadak Chai",
+      "image": "/assets/images/brands/product-range/product-5.avif",
+      "alt": "Namaste Kadak Chai",
+      "category": "Ready to Drink",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p6",
+      "title": "Tap House - Rosita Syrup",
+      "image": "/assets/images/brands/product-range/product-6.avif",
+      "alt": "Rosita Syrup",
+      "category": "Ready to Drink",
+      "brand": "Tap House"
+    },
+    {
+      "id": "p7",
+      "title": "Kokum Shot - Concentrate",
+      "image": "/assets/images/brands/product-range/product-7.avif",
+      "alt": "Kokum Shot",
+      "category": "Juice",
+      "brand": "Koku"
+    },
+    {
+      "id": "p8",
+      "title": "Nature Ola - Lemon Twist",
+      "image": "/assets/images/brands/product-range/product-8.avif",
+      "alt": "Nature Ola Lemon",
+      "category": "Carbonated Drinks",
+      "brand": "Nature Ola"
+    }
+  ]
+}
