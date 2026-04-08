@@ -61,18 +61,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const otherOpeningsContainer = document.getElementById("jd-other-openings");
     let otherHtml = "";
 
+    console.log("Jobs data :", jobsData);
+    
+
     // Filter out the current job and pick a few others
     const otherJobs = jobsData.filter(job => job.id !== currentJob.id).slice(0, 5); // Take up to 5 other jobs
 
-    otherJobs.forEach((job) => {
+    console.log("Other Jobs :", otherJobs);
+    console.log("Container:", otherOpeningsContainer);
+
+    otherJobs?.forEach((job) => {
+        console.log("Hello");
+        
         // Build tags
         let tagsHtml = "";
         if (job.type) {
-            tagsHtml += `<span class="tag" style="background-color: ${job.tag_colors.type.bg}; color: ${job.tag_colors.type.text}">${job.type}</span>`;
+            tagsHtml += `<span class="tag" style="background-color: ${job.tag_colors.type.bg}; color: ${job.tag_colors.type.text}">${job?.type}</span>`;
         }
+        console.log("Hello1", job);
+
         if (job.experience) {
-            tagsHtml += `<span class="tag" style="background-color: ${job.tag_colors.experience.bg}; color: ${job.tag_colors.experience.text}">${job.experience}</span>`;
+            tagsHtml += `<span class="tag" style="background-color: ${job?.tag_colors?.experience?.bg}; color: ${job?.tag_colors?.experience?.text}">${job?.experience}</span>`;
         }
+        console.log("Hello 2", job);
 
         // Map general colors to match CSS classes if needed, or inline style.
         // We'll use the job.bg_color directly as inline, although the original uses classes like 'purple', 'yellow', 'green'.
@@ -112,7 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     });
 
+    console.log("Other OpeningsContainer :", otherOpeningsContainer);
+    
+
     if (otherOpeningsContainer) {
+        console.log("Other Html :", otherHtml);
+        
         otherOpeningsContainer.innerHTML = otherHtml;
     }
 });
