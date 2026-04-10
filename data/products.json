@@ -1,10 +1,10 @@
 {
-  "categories": ["Juice", "Carbonated Drinks", "Sugar Replacer", "Ready to Drink"],
+  "categories": ["Juice", "Carbonated Drinks", "Sugar Replacer", "Ready to Drink", "Dip Tea", "Instant Tea", "3 in 1 Instant Tea", "Tea Leaves", "Ready to Eat"],
   "products": [
     {
       "id": "p1",
       "title": "Kokum Sparkle - Zero Sugar",
-      "image": "/assets/images/brands/product-range/product-1.avif",
+      "image": "/assets/images/koku/koku-3.avif",
       "alt": "Kokum Sparkle Zero Sugar",
       "category": "Carbonated Drinks",
       "brand": "Koku"
@@ -35,34 +35,82 @@
     },
     {
       "id": "p5",
-      "title": "Namaste Chai - Kadak Chai",
-      "image": "/assets/images/brands/product-range/product-5.avif",
-      "alt": "Namaste Kadak Chai",
-      "category": "Ready to Drink",
+      "title": "Instant Bhel (50g)",
+      "image": "/assets/images/brands/product-range/namaste-images/instant-snacks2.avif",
+      "alt": "Namaste Instant Bhel (50g)",
+      "category": "Ready to Eat",
       "brand": "Namaste Chai"
     },
     {
       "id": "p6",
-      "title": "Tap House - Rosita Syrup",
-      "image": "/assets/images/brands/product-range/product-6.avif",
-      "alt": "Rosita Syrup",
-      "category": "Ready to Drink",
-      "brand": "Tap House"
+      "title": "Instant Poha ( 60g )",
+      "image": "/assets/images/brands/product-range/namaste-images/instant-snacks1.avif",
+      "alt": "Instant Poha ( 60g )",
+      "category": "Ready to Eat",
+      "brand": "Namaste Chai"
     },
     {
       "id": "p7",
-      "title": "Kokum Shot - Concentrate",
-      "image": "/assets/images/brands/product-range/product-7.avif",
-      "alt": "Kokum Shot",
-      "category": "Juice",
-      "brand": "Koku"
+      "title": "Instant Bhel (400g)",
+      "image": "/assets/images/brands/product-range/namaste-images/instant-snacks2.avif",
+      "alt": "Instant Bhel (400g)",
+      "category": "Ready to Eat",
+      "brand": "Namaste Chai"
     },
     {
       "id": "p8",
+      "title": "Kadak Chai (22g X 30 Sachets)",
+      "image": "/assets/images/brands/product-range/namaste-images/3in1/combo1.avif",
+      "alt": "Kadak Chai (22g X 30 Sachets)",
+      "category": "3 in 1 Instant Tea",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p9",
+      "title": "Lemongrass Chai (22g X 30 Sachets)",
+      "image": "/assets/images/brands/product-range/namaste-images/3in1/combo2.avif",
+      "alt": "Lemongrass Chai (22g X 30 Sachets)",
+      "category": "3 in 1 Instant Tea",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p10",
+      "title": "Masala Chai (22g X 30 Sachets)",
+      "image": "/assets/images/brands/product-range/namaste-images/3in1/combo3.avif",
+      "alt": "Masala Chai (22g X 30 Sachets)",
+      "category": "3 in 1 Instant Tea",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p11",
+      "title": "Zafrani Chai (22g X 30 Sachets)",
+      "image": "/assets/images/brands/product-range/namaste-images/3in1/combo4.avif",
+      "alt": "Zafrani Chai (22g X 30 Sachets)",
+      "category": "3 in 1 Instant Tea",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p12",
+      "title": "Vegetable Juice (10 Sachets X 25g)",
+      "image": "/assets/images/brands/product-range/namaste-images/ready/drink1.avif",
+      "alt": "Vegetable Juice",
+      "category": "Ready to Drink",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p13",
+      "title": "Golden Latte-Spiced Turmeric Milk ...",
+      "image": "/assets/images/brands/product-range/namaste-images/ready/drink2.avif",
+      "alt": "Golden Latte-Spiced Turmeric Milk (28g X 10 Sachets)",
+      "category": "Ready to Drink",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p14",
       "title": "Nature Ola - Lemon Twist",
       "image": "/assets/images/brands/product-range/product-8.avif",
       "alt": "Nature Ola Lemon",
-      "category": "Carbonated Drinks",
+      "category": "Dip Tea",
       "brand": "Nature Ola"
     }
   ]
