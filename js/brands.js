@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentCategory = 'All';
   let allProducts = [];
 
+  const brandWebsiteMap = {
+    'Namaste Chai': 'https://www.thenamastestore.com/',
+    'LuvSweet': 'https://luvsweet.co/',
+    'TapHouse': 'https://www.taphouse.life/',
+    'Koku': 'https://kokudrink.com/'
+  };
+
   function createPill(name, active = false) {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -56,10 +63,17 @@ document.addEventListener('DOMContentLoaded', function () {
     addBtn.dataset.productId = p.id;
     addBtn.textContent = '+';
 
-    addBtn.addEventListener('click', function () {
-      const id = this.dataset.productId;
-      alert('Add clicked for product: ' + id + '\n' + p.title);
-    });
+    if (!brandWebsiteMap[p.brand]) {
+      addBtn.disabled = true;
+      addBtn.style.opacity = '0.5';
+    } else {
+      addBtn.addEventListener('click', function () {
+        const url = brandWebsiteMap[p.brand];
+        if (url) {
+          window.open(url, '_blank');
+        }
+      });
+    }
 
     bottom.appendChild(info);
     bottom.appendChild(addBtn);

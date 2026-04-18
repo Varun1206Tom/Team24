@@ -1,35 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Team24</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team24 - News Room</title>
+
+    <meta name="title" content="Team24 | Modern FMCG & Beverage Brands in India">
+    <meta name="description"
+        content="Team24 is a next-generation FMCG company building brands like Koku and Nature Ola with better ingredients, healthier choices, and better living.">
+    <meta name="keywords"
+        content="Team24, FMCG company India, beverage brands India, Koku drinks, Nature Ola soda, healthy drinks India, zero sugar soda India, packaged beverages India">
+    <meta name="author" content="Team24">
+    <meta name="robots" content="index, follow">
+
+    <!-- SOCIAL SHARING -->
+    <meta property="og:title" content="Team24 | Better Living Through Better Products">
+    <meta property="og:description"
+        content="Explore Team24 brands like Koku and Nature Ola focused on healthier and modern beverages.">
+    <meta property="og:image" content="https://yourdomain.com/assets/images/preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
-
 <body>
+
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg custom-navbar">
+
         <div class="container header-pill">
+
             <a class="navbar-brand ms-2 p-0" href="/index.html">
-                <img src="assets/images/logo2.png" height="40" />
+                <img src="assets/images/logo2.png" height="40">
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
@@ -38,51 +61,63 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
                 <ul class="navbar-nav gap-2">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Home</a>
+                        <a class="nav-link " href="/index.html">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">About Us</a>
+                        <a class="nav-link" href="/about.html">About Us</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/brands.html">Brands</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/CareersPages/careers.html">Careers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/news-room.html">News Room</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/CompanyInformation/Board_of_Directors.html">Investors</a>
                     </li>
 
+                    
+
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Media Center</a>
                     </li> -->
+
                 </ul>
+
             </div>
+
         </div>
         <div class="offcanvas offcanvas-start d-md-none d-sm-block" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-                <a class="navbar-brand" href="/index.html">
-                    <img src="assets/images/logo2.png" height="40" />
-                </a>
                 <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Team24</h5> -->
+                <a class="navbar-brand" href="/index.html">
+                    <img src="assets/images/logo2.png" height="40">
+                </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <div class="">
                     <ul>
-                        <li class="nav-item">
-                            <a class="dropdown-item" href="index.html">Home</a>
-                        </li>
-                        <li><a class="dropdown-item active" href="#">About Us</a></li>
-                        <li><a class="dropdown-item" href="brands.html">Brands</a></li>
+                        <li class="nav-item"><a class="dropdown-item active" href="#">Home</a></li>
+                        <li><a class="dropdown-item" href="/about.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="/brands.html">Brands</a></li>
                         <li><a class="dropdown-item" href="/CareersPages/careers.html">Careers</a></li>
-                        <li><a class="dropdown-item" href="/CompanyInformation/Board_of_Directors.html">Investors</a></li>
+                        <li><a class="dropdown-item active" href="/news-room.html">News Room</a></li>
+                        <li><a class="dropdown-item" href="/CompanyInformation/Board_of_Directors.html">Investors</a>
+                        </li>
                         <!-- <li><a class="dropdown-item" href="#">Media Center</a></li> -->
                     </ul>
                 </div>
@@ -90,99 +125,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="section hero-section">
-        <video autoplay muted loop class="hero-video">
-            <source src="assets/video/hero.mp4" type="video/mp4" />
-        </video>
-
-        <div class="container text-center hero-content position-relative">
-            <h2 class="fw-bold scroll-step">
-                We believe the everyday deserves better.
-            </h2>
-
-            <h2 class="scroll-step">
-                Better ingredients. Better choices. Better living.
-            </h2>
-        </div>
-    </section>
-
-    <!-- MISSION SECTION  -->
-    <section class="mission-section py-5">
-        <div class="container text-center">
-
-            <!-- Header -->
-            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mb-4">
-                <img src="assets/images/logo22.png" class="mission-logo" alt="Team24">
-                <div class="text-start">
-                    <small style="color: #0c4a47;">Mission</small>
-                    <h2 class="mission-title">Making Your Daily Better.</h2>
-                </div>
-            </div>
-
-            <!-- Stats -->
-            <div class="row justify-content-center align-items-center g-3 mb-4">
-
-                <div class="col-6 col-md-3 col-lg-auto">
-                    <div class="stat-pill">
-                        <h4>20+</h4>
-                        <p>Years</p>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-auto">
-                    <div class="stat-pill">
-                        <h4>200+</h4>
-                        <p>Products</p>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-auto">
-                    <div class="stat-pill">
-                        <h4>20+</h4>
-                        <p>In-House Brands</p>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-auto">
-                    <div class="stat-pill">
-                        <h4>5+</h4>
-                        <p>Countries</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Content -->
-            <div class="mission-content mx-auto text-start">
-
-                <p class="fw-semibold">
-                    Team24 is a next-generation consumer goods company on a mission
-                    to make premium products accessible to all.
-                </p>
-
-                <p class="fw-semibold">
-                    With over two decades of experience in formulation, sourcing,
-                    packaging, and production, we began as a trusted co-packing
-                    partner behind some of the most successful FMCG launches.
-                </p>
-
-                <p class="fw-semibold">
-                    Today, we're building our own house of brands-focused on quality, transparency, and value. <br>
-                    At Team24, we take what was once a luxury-clean ingredients, beautiful design, purposeful innovation-and make it affordable, without compromise. From refreshing kokum-based sodas like Koku, to all-natural fizzy drinks like Nature Ola, and smart health swaps like LuvSweet, we're creating products that fit seamlessly into real lives.
-                </p>
-
-                <p class="fw-semibold">
-                    We don't just launch products. We shape habits. We grow with
-                    our consumers-one honest, everyday essential at a time.
-                </p>
-
-            </div>
-
-        </div>
-    </section>
-
-     <!-- News Room Section  -->
     <section class="news-section">
         <div class="container mx-0 mx-md-4 news-section-container">
 
@@ -266,24 +208,6 @@
         </div>
     </section>
 
-
-    <!-- Onboard Section  -->
-    <section class="onboard-section">
-        <div class="container onboard-section-container">
-            <div class="mx-1 mx-md-5 my-md-5 d-flex justify-content-center flex-column align-items-center">
-                <h3 class="onboard-text text-white text-center">
-                    Onboard some of India's Fast <br> selling FMCG products.
-                </h3>
-                <button 
-                    class="btn onboard-btn rounded-pill w-75 w-md-50"
-                    onclick="window.location.href='mailto:hr@team24.in?subject=Inquiry%20from%20Website&body=Hi%20Team24,%0A%0AI%20would%20like%20to%20connect%20regarding...';"
-                >
-                    Get Intouch ->
-                </button>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-top-accent"></div>
@@ -316,6 +240,7 @@
                         <li><a href="/about.html">About Us</a></li>
                         <li><a href="/brands.html">Brands</a></li>
                         <li><a href="/CareersPages/careers.html">Careers</a></li>
+                        <li><a href="/news-room.html">News Room</a></li>
                         <li><a href="/CompanyInformation/Board_of_Directors.html">Investors</a></li>
                         <li><a href="#">Store Locator</a></li>
                     </ul>
@@ -367,16 +292,17 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
 
-    <script src="/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 
 </html>

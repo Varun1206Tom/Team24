@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Remove the extra margin so there is no "dead scrolling"
         // The section will immediately begin overlapping as you scroll!
-        section.style.marginBottom = "400px";
+        section.style.marginBottom = "500px";
 
         // Pre-set step visual states
         // Initially, the first text is fully visible and centered. The next text sits below it slightly faded.

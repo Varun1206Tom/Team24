@@ -25,13 +25,13 @@ body::-webkit-scrollbar {
 /* Main Section */
 .future-section {
     background-color: #EBF6EE;
-    min-height: 80vh;
+    max-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* vertical center */
     align-items: center;
-    padding: 160px 200px;
+    padding: 150px 200px;
 }
 
 .future-img {

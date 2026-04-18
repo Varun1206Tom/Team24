@@ -1,34 +1,35 @@
 {
-  "categories": ["Juice", "Carbonated Drinks", "Sugar Replacer", "Ready to Drink", "Dip Tea", "Instant Tea", "3 in 1 Instant Tea", "Tea Leaves", "Ready to Eat"],
+  "categories": ["Juice", "Carbonated Drinks", "Sugar Replacer", "Alcoholic Beverages", "Dip Tea", "Instant Tea", "3 in 1 Instant Tea", "Tea Leaves", "Ready to Eat"],
   "products": [
     {
       "id": "p1",
-      "title": "Kokum Sparkle - Zero Sugar",
-      "image": "/assets/images/koku/koku-3.avif",
-      "alt": "Kokum Sparkle Zero Sugar",
-      "category": "Carbonated Drinks",
-      "brand": "Koku"
+      "title": "Instant Bhel (400g)",
+      "image": "/assets/images/brands/product-range/namaste-images/instant-snacks2.avif",
+      "alt": "Instant Bhel (400g)",
+      "category": "Ready to Eat",
+      "brand": "Namaste Chai"
     },
+    
     {
       "id": "p2",
-      "title": "Kokum Juice - Classic",
-      "image": "/assets/images/brands/product-range/product-2.avif",
-      "alt": "Kokum Juice",
-      "category": "Juice",
-      "brand": "Koku"
+      "title": "Club Soda",
+      "image": "/assets/images/brands/product-range/luv-sweet/club-soda.avif",
+      "alt": "Club Soda",
+      "category": "Carbonated Drinks",
+      "brand": "TapHouse"
     },
     {
       "id": "p3",
-      "title": "Nature Ola Cola - Zero",
-      "image": "/assets/images/brands/product-range/product-3.avif",
-      "alt": "Nature Ola Cola",
-      "category": "Carbonated Drinks",
-      "brand": "Nature Ola"
+      "title": "Hardy Bear",
+      "image": "/assets/images/brands/product-range/luv-sweet/hardy-bear.avif",
+      "alt": "Hardy Bear",
+      "category": "Alcoholic Beverages",
+      "brand": "TapHouse"
     },
     {
       "id": "p4",
       "title": "LuvSweet - Sugar Replacer Sachet",
-      "image": "/assets/images/brands/product-range/product-4.avif",
+      "image": "/assets/images/brands/product-range/luv-sweet/luvsweet-natural-1kg.avif",
       "alt": "LuvSweet Sachet",
       "category": "Sugar Replacer",
       "brand": "LuvSweet"
@@ -51,11 +52,11 @@
     },
     {
       "id": "p7",
-      "title": "Instant Bhel (400g)",
-      "image": "/assets/images/brands/product-range/namaste-images/instant-snacks2.avif",
-      "alt": "Instant Bhel (400g)",
-      "category": "Ready to Eat",
-      "brand": "Namaste Chai"
+      "title": "Kokum Sparkle - Zero Sugar",
+      "image": "/assets/images/koku/koku-3.avif",
+      "alt": "Kokum Sparkle Zero Sugar",
+      "category": "Carbonated Drinks",
+      "brand": "Koku"
     },
     {
       "id": "p8",
@@ -94,7 +95,7 @@
       "title": "Vegetable Juice (10 Sachets X 25g)",
       "image": "/assets/images/brands/product-range/namaste-images/ready/drink1.avif",
       "alt": "Vegetable Juice",
-      "category": "Ready to Drink",
+      "category": "Juice",
       "brand": "Namaste Chai"
     },
     {
@@ -102,16 +103,107 @@
       "title": "Golden Latte-Spiced Turmeric Milk ...",
       "image": "/assets/images/brands/product-range/namaste-images/ready/drink2.avif",
       "alt": "Golden Latte-Spiced Turmeric Milk (28g X 10 Sachets)",
-      "category": "Ready to Drink",
+      "category": "Juice",
       "brand": "Namaste Chai"
     },
     {
       "id": "p14",
-      "title": "Nature Ola - Lemon Twist",
-      "image": "/assets/images/brands/product-range/product-8.avif",
-      "alt": "Nature Ola Lemon",
+      "title": "Niro - TapHouse",
+      "image": "/assets/images/brands/product-range/luv-sweet/niro.avif",
+      "alt": "Niro - TapHouse",
+      "category": "Alcoholic Beverages",
+      "brand": "TapHouse"
+    },
+
+
+
+
+    {
+      "id": "p15",
+      "title": "Rosita - Tap House",
+      "image": "/assets/images/brands/product-range/luv-sweet/rosita.avif",
+      "alt": "Rosita - Tap House",
+      "category": "Alcoholic Beverages",
+      "brand": "TapHouse"
+    },
+
+    {
+      "id": "p16",
+      "title": "LuvSweet - Zero Cal Sweetner",
+      "image": "/assets/images/brands/product-range/luv-sweet/luvsweet-1kg-zero-cal.avif",
+      "alt": "LuvSweet - Zero Cal Sweetner",
+      "category": "Sugar Replacer",
+      "brand": "LuvSweet"
+    },
+
+    {
+      "id": "p17",
+      "title": "LuvSweet - Zero Cal Sweetner (1kg)",
+      "image": "/assets/images/brands/product-range/luv-sweet/luvsweet-mockup-jar2.avif",
+      "alt": "LuvSweet - Zero Cal Sweetner (1kg)",
+      "category": "Sugar Replacer",
+      "brand": "LuvSweet"
+    },
+
+    {
+      "id": "p18",
+      "title": "LuvSweet - Monk Fruit & Stevia Extract",
+      "image": "/assets/images/brands/product-range/luv-sweet/luvsweet-mockup-jar1.avif",
+      "alt": "LuvSweet - Monk Fruit & Stevia Extract",
+      "category": "Sugar Replacer",
+      "brand": "LuvSweet"
+    },
+
+    {
+      "id": "p19",
+      "title": "Koku - Kokum Soda",
+      "image": "/assets/images/brands/product-range/brand-slide-3.avif",
+      "alt": "Koku Kokum Soda",
+      "category": "Carbonated Drinks",
+      "brand": "Koku"
+    },
+
+    {
+      "id": "p20",
+      "title": "Koku - Kokum Juice",
+      "image": "/assets/images/koku/koku-2.avif",
+      "alt": "Koku Kokum Juice",
+      "category": "Juice",
+      "brand": "Koku"
+    },
+
+
+    {
+      "id": "p21",
+      "title": "Antioxidant (Aracanut, Kokum, Green Tea)",
+      "image": "/assets/images/brands/product-range/namaste-images/dip1.avif",
+      "alt": "Antioxidant (Aracanut, Kokum, Green Tea)",
       "category": "Dip Tea",
-      "brand": "Nature Ola"
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p22",
+      "title": "Pure Green Tea (Green Tea) - Single Sachet",
+      "image": "/assets/images/brands/product-range/namaste-images/dip2.avif",
+      "alt": "Pure Green Tea (Green Tea) - Single Sachet",
+      "category": "Dip Tea",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p23",
+      "title": "Energy (Ginger, Tulsi & Green Tea)-Single Sachets",
+      "image": "/assets/images/brands/product-range/namaste-images/dip3.avif",
+      "alt": "Energy (Ginger, Tulsi & Green Tea)-Single Sachets",
+      "category": "Dip Tea",
+      "brand": "Namaste Chai"
+    },
+    {
+      "id": "p24",
+      "title": "Clear Skin (Hibiscus, Rose Petal & Tulsi) -Single Sachet",
+      "image": "/assets/images/brands/product-range/namaste-images/dip4.avif",
+      "alt": "Clear Skin (Hibiscus, Rose Petal & Tulsi) -Single Sachet",
+      "category": "Dip Tea",
+      "brand": "Namaste Chai"
     }
   ]
 }
