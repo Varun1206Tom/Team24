@@ -513,8 +513,8 @@ body::-webkit-scrollbar {
 }
 
 .filter-scroll{
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .filter-scroll .btn {
