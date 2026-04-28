@@ -38,6 +38,7 @@ body::-webkit-scrollbar {
 
 .mission-section{
     background:#dfe7e4;
+    min-height: 110vh;
     position: relative;
 }
 

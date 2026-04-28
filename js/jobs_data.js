@@ -28,7 +28,7 @@ const jobsData = [
         experience: "",
         bg_color: "#CEBCFF",
         tag_colors: { type: { bg: "#D0FCFF", text: "#0076FF" }, experience: { bg: "#F6D3FF", text: "#E168FF" } },
-        logo: "/assets/images/careers-img/career_logo.avif"
+        logo: "/assets/images/namaste-chai/namaste.webp"
     },
     {
         id: 2,
@@ -68,7 +68,7 @@ const jobsData = [
         experience: "Middle+",
         bg_color: "#FFE078",
         tag_colors: { type: { bg: "#D0FCFF", text: "#0076FF" }, experience: { bg: "#BDFF95", text: "#3C9D00" } },
-        logo: "/assets/images/careers-img/career_logo.avif"
+        logo: "/assets/images/logo22.png"
     },
     {
         id: 3,
@@ -108,7 +108,7 @@ const jobsData = [
         experience: "Middle+",
         bg_color: "#AB93E0",
         tag_colors: { type: { bg: "#D0FCFF", text: "#0076FF" }, experience: { bg: "#BDFF95", text: "#3C9D00" } },
-        logo: "/assets/images/careers-img/career_logo.avif"
+        logo: "/assets/images/logo22.png"
     },
     {
         id: 4,
@@ -134,7 +134,7 @@ const jobsData = [
         experience: "Middle+",
         bg_color: "#DCC1FF",
         tag_colors: { type: { bg: "#D0FCFF", text: "#0076FF" }, experience: { bg: "#F6D3FF", text: "#E168FF" } },
-        logo: "/assets/images/careers-img/career_logo.avif"
+        logo: "/assets/images/namaste-chai/namaste.webp"
     },
     {
         id: 5,
@@ -160,7 +160,7 @@ const jobsData = [
         experience: "",
         bg_color: "#EBF6EE",
         tag_colors: { type: { bg: "#D0FCFF", text: "#0076FF" }, experience: { bg: "#BDFF95", text: "#3C9D00" } },
-        logo: "/assets/images/careers-img/career_logo.avif"
+        logo: "/assets/images/namaste-chai/namaste.webp"
     },
     {
         id: 6,
@@ -193,7 +193,7 @@ const jobsData = [
         experience: "",
         bg_color: "#9DF9FF",
         tag_colors: { type: { bg: "#D0FCFF", text: "#0076FF" }, experience: null },
-        logo: "/assets/images/careers-img/career_logo.avif"
+        logo: "/assets/images/namaste-chai/namaste.webp"
     }
 ];
 
