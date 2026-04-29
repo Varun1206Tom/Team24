@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    const jobImage = document.querySelector(".job-detail-img");
+    if (jobImage) {
+        jobImage.src = currentJob.detail_image || "/assets/images/careers-img/career-detail.avif";
+        jobImage.alt = currentJob.title;
+    }
+
     // Update Page Title
     document.title = `${currentJob.title} - Team24 Careers`;
 
@@ -62,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let otherHtml = "";
 
     console.log("Jobs data :", jobsData);
-    
+
 
     // Filter out the current job and pick a few others
     const otherJobs = jobsData.filter(job => job.id !== currentJob.id).slice(0, 5); // Take up to 5 other jobs
@@ -72,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     otherJobs?.forEach((job) => {
         console.log("Hello");
-        
+
         // Build tags
         let tagsHtml = "";
         if (job.type) {
@@ -124,11 +130,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     console.log("Other OpeningsContainer :", otherOpeningsContainer);
-    
+
 
     if (otherOpeningsContainer) {
         console.log("Other Html :", otherHtml);
-        
+
         otherOpeningsContainer.innerHTML = otherHtml;
     }
 });
@@ -238,7 +244,7 @@ const applyBtn = document.querySelector('.apply-btn');
 const overlay = document.getElementById('blur-overlay');
 
 document.querySelectorAll('.apply-btn').forEach(btn => {
-    
+
     btn.addEventListener('show.bs.dropdown', () => {
         overlay.classList.add('active');
     });
