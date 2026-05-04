@@ -64,7 +64,7 @@ body::-webkit-scrollbar {
 .innovation-title {
     font-size: 45px;
     line-height: 1.08;
-    font-weight: 500;
+    font-weight: 600;
     color: #005f6d;
     margin-bottom: 34px;
     letter-spacing: -0.5px;
@@ -137,7 +137,7 @@ body::-webkit-scrollbar {
 
     @media screen and ( max-width: 768px ) {
         .innovate-img-wrapper {
-            padding-right: 0;
+            padding-right: 0 !important;
         }
     }
 
@@ -344,7 +344,8 @@ body::-webkit-scrollbar {
 ========================= */
 @media (max-width: 767.98px) {
     .innovation-section {
-        padding: 45px 0;
+        /* padding: 45px 0; */
+        padding: 45px 0 5px 0;
     }
 
     .innovation-card {
@@ -408,11 +409,12 @@ body::-webkit-scrollbar {
 ========================= */
 @media (max-width: 480px) {
     .innovation-title {
-        font-size: 27px;
+        font-size: 35px;
     }
 
     .innovation-subtitle {
         font-size: 14px;
+        line-height: 18px;
     }
 
     .innovation-stats {
@@ -523,12 +525,22 @@ body::-webkit-scrollbar {
 
 @media (max-width: 576px) {
     .filter-scroll {
+        padding-left: 20px;
+        padding-right: 20px;
         justify-content: flex-start;
     }
 
     .filter-scroll .btn {
         font-size: 13px;
         white-space: nowrap;
+    }
+
+    .category {
+        font-size: 12px;
+    }
+
+    .brand {
+        font-size: 1px;
     }
 }
 
@@ -683,6 +695,7 @@ body::-webkit-scrollbar {
     background: #fff;
     position: relative;
     transition: 0.3s;
+    height: 100%;
 }
 
 .custom-card:hover {
@@ -720,6 +733,19 @@ body::-webkit-scrollbar {
 .card-info .brand {
     color: #22c7a9;
     font-size: 14px;
+}
+
+@media screen and (max-width: 420px) {
+    .card-title {
+        font-weight: 600;
+        color: #0f3d3e;
+        font-size: 14px;
+    }
+
+    .card-info .brand {
+        color: #22c7a9;
+        font-size: 12px;
+    }
 }
 
 /* Button */
