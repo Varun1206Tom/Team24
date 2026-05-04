@@ -93,12 +93,16 @@ body::-webkit-scrollbar {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+
+    object-fit: cover;       /* fills container without stretching */
+    object-position: center center; /* focuses on the center of the video */
 }
 
 /* Mobile adjustment */
 @media (max-width: 768px) {
     .hero-video {
-        object-position: 100% center;
+        object-position: 90% center;
+        
     }
 }
 
@@ -214,8 +218,6 @@ body::-webkit-scrollbar {
     background-image: url("../assets/images/story4-bg.avif");
     color: white;
     min-height: 110vh;
-
-    /* height: 105vh; */
     position: sticky;
     top: 0;
     display: flex;
@@ -235,6 +237,12 @@ body::-webkit-scrollbar {
     background-position: center;
 }
 
+@media screen and (max-width: 468px) {
+    .koku-img {
+        margin-top: -40px;
+    }
+}
+
 .kokum-section {
     background-image: url("../assets/images/kokum-bg.jpg");
     color: white;
@@ -251,7 +259,7 @@ body::-webkit-scrollbar {
     width: fit-content !important;
 } */
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 468px) {
     .koku-section {
         padding: 40px 20px;
     }
@@ -344,7 +352,7 @@ body::-webkit-scrollbar {
     min-height: 110vh;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 468px) {
     .nature-img {
         /* height: 20px; */
         width: 85%;
@@ -425,7 +433,7 @@ body::-webkit-scrollbar {
 /* Mobile */
 @media (max-width: 768px) {
     .tap-house-section {
-        min-height: auto;
+        min-height: 110vh;
         padding-top: 80px;
         padding-bottom: 40px;
     }
@@ -436,6 +444,7 @@ body::-webkit-scrollbar {
 
     .tap-img {
         width: 260px;
+        margin-top: -30px;
     }
 
     .tap-logo-anim {
@@ -476,7 +485,7 @@ body::-webkit-scrollbar {
     background-position: center;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 468px) {
     .distribution-title {
         font-size: 18px;
         width: 100%;
@@ -558,7 +567,7 @@ body::-webkit-scrollbar {
     transform: translateY(-2px);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 468px) {
     .news-section {
         padding: 0;
     }

@@ -36,8 +36,8 @@ body::-webkit-scrollbar {
     margin: 90px;
 }
 
-@media screen and ( max-width: 768px ) {
-    
+@media screen and (max-width: 768px) {
+
     .outer-card {
         margin: 40px 20px;
     }
@@ -129,25 +129,25 @@ body::-webkit-scrollbar {
     position: relative;
 }
 
+.innovate-img-wrapper {
+    width: 100%;
+    height: auto;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
     .innovate-img-wrapper {
-        width: 100%;
-        height: auto;
-        padding-right: 30px;
+        padding-right: 0 !important;
     }
+}
 
-    @media screen and ( max-width: 768px ) {
-        .innovate-img-wrapper {
-            padding-right: 0 !important;
-        }
-    }
-
-    .innovate-img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
-        /* object-position: center; */
-    }
+.innovate-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* object-position: center; */
+}
 
 /* Base visual */
 .visual {
@@ -301,7 +301,7 @@ body::-webkit-scrollbar {
         gap: 1px;
         flex-wrap: nowrap;
     }
-    
+
     .stat-item {
         min-width: 65px;
     }
@@ -409,7 +409,7 @@ body::-webkit-scrollbar {
 ========================= */
 @media (max-width: 480px) {
     .innovation-title {
-        font-size: 35px;
+        font-size: 28px;
     }
 
     .innovation-subtitle {
@@ -419,7 +419,8 @@ body::-webkit-scrollbar {
 
     .innovation-stats {
         gap: 0px;
-        flex-wrap: nowrap;      /* prevent wrapping */
+        flex-wrap: nowrap;
+        /* prevent wrapping */
     }
 
     .stat-circle {
@@ -462,6 +463,12 @@ body::-webkit-scrollbar {
     /* vertical center */
     align-items: center;
     /* horizontal center */
+}
+
+@media screen and ( max-width: 576px ) {
+    .brand-partners-block {
+        height: 80vh;
+    }
 }
 
 .brand-title {
@@ -514,7 +521,7 @@ body::-webkit-scrollbar {
     color: #0b2b2b;
 }
 
-.filter-scroll{
+.filter-scroll {
     padding-left: 200px;
     padding-right: 200px;
 }
@@ -610,7 +617,7 @@ body::-webkit-scrollbar {
     }
 
     .partners-block {
-        min-height: 110vh;
+        min-height: 90vh;
     }
 }
 
@@ -682,11 +689,11 @@ body::-webkit-scrollbar {
     padding-right: 150px;
 }
 
-@media screen and ( max-width: 768px ) {
+@media screen and (max-width: 768px) {
     .product-cards {
         padding-left: 1px;
         padding-right: 1px;
-    }   
+    }
 }
 
 .custom-card {
@@ -699,7 +706,7 @@ body::-webkit-scrollbar {
 }
 
 .custom-card:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* Image */
@@ -735,7 +742,7 @@ body::-webkit-scrollbar {
     font-size: 14px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 468px) {
     .card-title {
         font-weight: 600;
         color: #0f3d3e;
@@ -768,10 +775,70 @@ body::-webkit-scrollbar {
     background: #22c7a9;
 }
 
-@media screen and ( max-width: 768px ) {
+@media screen and (max-width: 768px) {
     .add-btn {
         width: 40px;
         height: 40px;
         font-size: 18px;
+    }
+}
+
+
+
+.onboard-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    display: block;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+
+.onboard-text {
+    color: #003A3F;
+    font-weight: 1000;
+}
+
+.onboard-btn {
+    background-color: #FFFBCA;
+    color: #00373B;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.onboard-btn:hover {
+    background-color: #003A3F;
+    color: #FFFBCA;
+}
+
+.onboard-body {
+    background-color: #EBF6EE;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+@media screen and (max-width: 720px) {
+
+    .onboard-text {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .onboard-img {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 0;
+    }
+
+    .onboard-btn {
+        background-color: #FFFBCA;
+        color: #00373B;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 14px;
     }
 }

@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
 }
 
 .mission-logo{
-    height:85px;
+    height:110px;
 }
 
 .mission-title{
@@ -79,6 +79,12 @@ body::-webkit-scrollbar {
     font-size: 19px;
 }
 
+@media screen and (max-width: 468px) {
+    .mission-content{
+        padding: 15px;
+    }
+}
+
 /* news section */
 .news-section {
     min-height: 100vh;
@@ -106,7 +112,7 @@ body::-webkit-scrollbar {
     transform: translateY(-2px);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 468px) {
     .news-section {
         padding: 0;
     }
@@ -206,4 +212,17 @@ body::-webkit-scrollbar {
         width: 100%;
         font-size: 14px;
     }
+}
+
+@media screen and (max-width: 468px) {
+    .mission-stats-col {
+        display: flex;
+        justify-content: end;
+    }
+
+    .mission-stats-col-1 {
+        display: flex;
+        justify-content: start;
+    }
+
 }
