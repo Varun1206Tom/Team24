@@ -263,9 +263,6 @@ body::-webkit-scrollbar {
     .koku-section {
         padding: 40px 20px;
     }
-    .koku-slider {
-        /* left: 10%; */
-    }
 
     .category-card {
         margin-left: 20px;
@@ -274,16 +271,7 @@ body::-webkit-scrollbar {
     .slick-slide {
         padding-right: 10px;
         padding: 0 8px;
-
     }
-
-.koku-slider .slick-list {
-        /* margin: 0 -8px; */
-    }
-}
-
-.koku-slider {
-    /* left: 10%; */
 }
 
 /* koku cards section */
@@ -300,7 +288,7 @@ body::-webkit-scrollbar {
 
 @media screen and ( max-width: 768px ) {
     .koku-slider .category-card {
-        height: 300px;
+        height: 360px;
         width: 80%;
         border-radius: 20px;
         background-size: cover;
@@ -312,6 +300,10 @@ body::-webkit-scrollbar {
     .koku-slider {
         margin-left: 9%;
         /* left: 8.5%; */
+    }
+
+    .koku-slider .slick-track {
+        gap: 20px;
     }
 
 }
