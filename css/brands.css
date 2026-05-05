@@ -132,7 +132,7 @@ body::-webkit-scrollbar {
 .innovate-img-wrapper {
     width: 100%;
     height: auto;
-    padding-right: 30px;
+    /* padding-right: 30px; */
 }
 
 @media screen and (max-width: 768px) {
@@ -147,6 +147,7 @@ body::-webkit-scrollbar {
     display: block;
     object-fit: contain;
     /* object-position: center; */
+
 }
 
 /* Base visual */
@@ -552,7 +553,8 @@ body::-webkit-scrollbar {
 }
 
 .category-pill {
-    background-color: #C6C6C6;
+    background-color: #D9D9D9;
+    /* background-color: #C6C6C6; */
     color: #222;
     font-weight: 400;
 }
@@ -574,7 +576,7 @@ body::-webkit-scrollbar {
 ========================== */
 .partners-block {
     background-color: #EBF6EE;
-    height: 50vh;
+    min-height: 110vh;
 
     display: flex;
     flex-direction: column;
@@ -783,7 +785,12 @@ body::-webkit-scrollbar {
     }
 }
 
-
+.onboard-section {
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .onboard-img {
     width: 100%;
@@ -816,6 +823,7 @@ body::-webkit-scrollbar {
 
 .onboard-body {
     background-color: #EBF6EE;
+    height: auto;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
