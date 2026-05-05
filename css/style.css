@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
     .section {
         padding: 40px 20px;
     }
-    
+
 }
 
 /* HERO */
@@ -94,15 +94,17 @@ body::-webkit-scrollbar {
     object-fit: cover;
     z-index: -1;
 
-    object-fit: cover;       /* fills container without stretching */
-    object-position: center center; /* focuses on the center of the video */
+    object-fit: cover;
+    /* fills container without stretching */
+    object-position: center center;
+    /* focuses on the center of the video */
 }
 
 /* Mobile adjustment */
 @media (max-width: 768px) {
     .hero-video {
         object-position: 90% center;
-        
+
     }
 }
 
@@ -148,15 +150,18 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 768px) {
     .next-generation-section {
-        position: relative; /* remove sticky */
-        min-height: auto;   /* allow natural height */
+        position: relative;
+        /* remove sticky */
+        min-height: auto;
+        /* allow natural height */
         padding: 40px 0;
     }
+
     .brand-cards {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
-    
+
     .brand-card {
         height: 170px !important;
     }
@@ -183,7 +188,7 @@ body::-webkit-scrollbar {
 .brand-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
     display: flex;
     align-items: flex-end;
     padding: 20px;
@@ -203,7 +208,7 @@ body::-webkit-scrollbar {
 }
 
 .brand-card:hover .brand-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
 }
 
 @media screen and (max-width: 768px) {
@@ -286,7 +291,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-@media screen and ( max-width: 768px ) {
+@media screen and (max-width: 768px) {
     .koku-slider .category-card {
         height: 360px;
         width: 80%;
@@ -297,6 +302,7 @@ body::-webkit-scrollbar {
         position: relative;
         overflow: hidden;
     }
+
     .koku-slider {
         margin-left: 9%;
         /* left: 8.5%; */
@@ -471,7 +477,7 @@ body::-webkit-scrollbar {
 
 .distribution-section {
     /* background-color: #EBF6EE; */
-    background-color: #fff;
+    background-color: #EBF6EE;
     /* padding: 100px 0 120px; */
     min-height: 110vh;
     position: relative;
@@ -510,20 +516,20 @@ body::-webkit-scrollbar {
     transition: transform 0.25s ease;
 }
 
-.dist-img:hover  {
+.dist-img:hover {
     transform: scale(1.05);
 }
 
 @media screen and (max-width: 760px) {
 
-    .dist-img{
+    .dist-img {
         width: 800px;
     }
 
     .dist-img-mobile {
         width: 100%;
         height: auto;
-        
+
     }
 
     .distribution-section {

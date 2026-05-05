@@ -4,7 +4,8 @@ body {
     overflow-x: hidden;
     /* Hide scrollbar - Firefox */
     scrollbar-width: none;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
 }
 
 /* Hide scrollbar - Chrome, Safari, Edge */
@@ -25,62 +26,71 @@ body::-webkit-scrollbar {
 /* HERO */
 .hero-section {
     height: 100vh;
-    position: sticky;
+    position: relative;
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
     color: white;
 }
 
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 /* MISSION */
 
-.mission-section{
-    background:#dfe7e4;
+.mission-section {
+    background: #dfe7e4;
     min-height: 110vh;
     position: relative;
 }
 
-.mission-logo{
-    height:110px;
+.mission-logo {
+    height: 110px;
 }
 
-.mission-title{
-    font-size:28px;
-    font-weight:600;
-    margin:0;
-    color:#0c4a47;
+.mission-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    color: #0c4a47;
 }
 
-.stat-pill{
-    background:white;
-    padding:14px 28px;
-    border-radius:40px;
+.stat-pill {
+    background: white;
+    padding: 14px 28px;
+    border-radius: 40px;
     width: 160px;
 }
 
-.stat-pill h4{
-    margin:0;
-    font-size:20px;
+.stat-pill h4 {
+    margin: 0;
+    font-size: 20px;
     font-weight: 700;
-    color:#0c4a47;
+    color: #0c4a47;
 }
 
-.stat-pill p{
-    margin:0;
-    font-size:13px;
+.stat-pill p {
+    margin: 0;
+    font-size: 13px;
 }
 
-.mission-content{
-    max-width:720px;
-    color:#0c4a47;
-    line-height:1.2;
+.mission-content {
+    max-width: 720px;
+    color: #0c4a47;
+    line-height: 1.2;
     font-size: 19px;
 }
 
 @media screen and (max-width: 468px) {
-    .mission-content{
+    .mission-content {
         padding: 15px;
     }
 }
@@ -148,35 +158,38 @@ body::-webkit-scrollbar {
 /* ON BOARD SECTION  */
 .onboard-section {
     background-color: #EBF6EE;
-    min-height: 90vh; /* instead of height */
+    min-height: 90vh;
+    /* instead of height */
     position: relative;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px; /* responsive padding */
+    padding: 40px 20px;
+    /* responsive padding */
     background-size: cover;
     background-position: center;
 }
 
 .onboard-section-container {
-    background-image: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../assets/images/story7-bg.avif');
-        
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     width: 100%;
-    max-width: 1200px; /* keeps it centered & clean */
+    max-width: 1200px;
+    /* keeps it centered & clean */
     min-height: 300px;
     border-radius: 26px;
 
     display: flex;
     justify-content: center;
-    
+
 }
 
 .onboard-btn {
